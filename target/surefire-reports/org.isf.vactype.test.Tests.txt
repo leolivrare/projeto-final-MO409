@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: org.isf.vactype.test.Tests
 -------------------------------------------------------------------------------
-Tests run: 23, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.288 s -- in org.isf.vactype.test.Tests
+Tests run: 23, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.104 s -- in org.isf.vactype.test.Tests

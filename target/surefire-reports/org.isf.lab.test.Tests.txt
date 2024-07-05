@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: org.isf.lab.test.Tests
 -------------------------------------------------------------------------------
-Tests run: 162, Failures: 0, Errors: 0, Skipped: 2, Time elapsed: 1.245 s -- in org.isf.lab.test.Tests
+Tests run: 162, Failures: 0, Errors: 0, Skipped: 2, Time elapsed: 0.938 s -- in org.isf.lab.test.Tests

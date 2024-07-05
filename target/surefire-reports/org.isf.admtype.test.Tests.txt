@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: org.isf.admtype.test.Tests
 -------------------------------------------------------------------------------
-Tests run: 14, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.133 s -- in org.isf.admtype.test.Tests
+Tests run: 14, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.150 s -- in org.isf.admtype.test.Tests
