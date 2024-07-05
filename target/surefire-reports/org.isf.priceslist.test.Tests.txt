@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: org.isf.priceslist.test.Tests
 -------------------------------------------------------------------------------
-Tests run: 33, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.109 s -- in org.isf.priceslist.test.Tests
+Tests run: 33, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.172 s -- in org.isf.priceslist.test.Tests

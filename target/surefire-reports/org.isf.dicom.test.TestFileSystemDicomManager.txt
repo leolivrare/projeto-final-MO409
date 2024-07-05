@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: org.isf.dicom.test.TestFileSystemDicomManager
 -------------------------------------------------------------------------------
-Tests run: 22, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.126 s -- in org.isf.dicom.test.TestFileSystemDicomManager
+Tests run: 22, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.180 s -- in org.isf.dicom.test.TestFileSystemDicomManager

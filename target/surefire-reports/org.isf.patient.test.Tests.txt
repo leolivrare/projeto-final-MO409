@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: org.isf.patient.test.Tests
 -------------------------------------------------------------------------------
-Tests run: 67, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.289 s -- in org.isf.patient.test.Tests
+Tests run: 67, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.257 s -- in org.isf.patient.test.Tests

@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: org.isf.exa.test.Tests
 -------------------------------------------------------------------------------
-Tests run: 44, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.644 s -- in org.isf.exa.test.Tests
+Tests run: 44, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.317 s -- in org.isf.exa.test.Tests

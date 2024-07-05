@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: org.isf.utils.db.TestBCrypt
 -------------------------------------------------------------------------------
-Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.464 s -- in org.isf.utils.db.TestBCrypt
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.597 s -- in org.isf.utils.db.TestBCrypt
