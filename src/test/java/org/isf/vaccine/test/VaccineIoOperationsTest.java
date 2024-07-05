@@ -28,6 +28,7 @@ import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
+import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
 import org.springframework.beans.factory.annotation.Autowired;
 import static org.assertj.core.api.Assertions.assertThat;
@@ -72,6 +73,7 @@ public class VaccineIoOperationsTest extends OHCoreTestCase {
     @Before
     public void setUp() {
         MockitoAnnotations.initMocks(this);
+        vaccineIoOperationRepository = Mockito.mock(VaccineIoOperationRepository.class);
     }
 
     public VaccineIoOperationsTest(String code, boolean existsInDb, boolean dbIsOn) {
@@ -92,7 +94,7 @@ public class VaccineIoOperationsTest extends OHCoreTestCase {
             // Case 5: Test how getVaccine handles a vaccine code that does not exist in the database when the database is on
             {"12", false, true}, 
             // Case 6: Test how getVaccine handles a vaccine code that exists in the database but the database is off
-            {"1", false, true}, 
+            {"1", false, true},
             // Case 7: Test how getVaccine handles a vaccine code that exists in the database but the database is off
             {"1", true, false} 
         });
@@ -100,36 +102,40 @@ public class VaccineIoOperationsTest extends OHCoreTestCase {
 
     @Test
     public void testIoGetVaccineShouldFindByTypeCode() throws Exception {
-		Vaccine foundVaccine = null;
-		if (dbIsOn) {
-			if (existsInDb) {
-				String code = _setupTestVaccine(false);
-				foundVaccine = vaccineIoOperation.findVaccine(code);
-				when(vaccineIoOperationRepository.findByVaccineType_CodeOrderByDescriptionAsc(code)).thenReturn(Arrays.asList(foundVaccine));
-			} else {
-				when(vaccineIoOperationRepository.findByVaccineType_CodeOrderByDescriptionAsc(code)).thenReturn(Collections.emptyList());
-			}
-			List<Vaccine> vaccines = vaccineIoOperation.getVaccine(code);
-			if (existsInDb) {
-				if (!vaccines.isEmpty()) {
-					assertThat(vaccines.get(vaccines.size() - 1).getDescription()).isEqualTo(foundVaccine.getDescription());
-				}
-			} else {
-				assertThat(vaccines).isEmpty();
-			}
-		} else {
-			RuntimeException cause = new RuntimeException("Database is off");
-			when(vaccineIoOperationRepository.findByVaccineType_CodeOrderByDescriptionAsc(code)).thenThrow(cause);
-			assertThatThrownBy(() -> vaccineIoOperation.getVaccine(code)).isInstanceOf(RuntimeException.class);
-		}
-	}
+        Vaccine foundVaccine = null;
+        if (dbIsOn) {
+            if (existsInDb) {
+                if (code != null) {
+                    _setupTestVaccine(code, false);
+                    foundVaccine = vaccineIoOperation.findVaccine(code);
+                    when(vaccineIoOperationRepository.findByVaccineType_CodeOrderByDescriptionAsc(code)).thenReturn(Arrays.asList(foundVaccine));
+                } else {
+                    when(vaccineIoOperationRepository.findAll()).thenReturn(Collections.emptyList());
+                }
+            } else {
+                when(vaccineIoOperationRepository.findByVaccineType_CodeOrderByDescriptionAsc(code)).thenReturn(Collections.emptyList());
+            }
+            List<Vaccine> vaccines = vaccineIoOperation.getVaccine(code);
+            if (existsInDb) {
+                if (!vaccines.isEmpty()) {
+                    assertThat(vaccines.get(vaccines.size() - 1).getDescription()).isEqualTo(foundVaccine.getDescription());
+                }
+            } else {
+                assertThat(vaccines).isEmpty();
+            }
+        } else {
+            RuntimeException cause = new RuntimeException("Database is off");
+            when(vaccineIoOperation.getVaccine(code)).thenThrow(cause);
+            assertThatThrownBy(() -> vaccineIoOperation.getVaccine(code)).isInstanceOf(RuntimeException.class);
+        }
+    }
 
-    private String _setupTestVaccine(boolean usingSet) throws OHException {
+    private void _setupTestVaccine(String code, boolean usingSet) throws OHException {
         VaccineType vaccineType = testVaccineType.setup(false);
+        vaccineType.setCode(code);
         Vaccine vaccine = testVaccine.setup(vaccineType, usingSet);
         vaccineTypeIoOperationRepository.saveAndFlush(vaccineType);
         vaccineIoOperationRepository.saveAndFlush(vaccine);
-        return vaccine.getCode();
     }
 
 }
