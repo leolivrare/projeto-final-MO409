@@ -36,6 +36,9 @@ public class VaccineIoOperationsNewVaccineTest extends OHCoreTestCase {
     @Test
     public void testIoNewVaccine() throws Exception {
         testIoNewVaccineWithParams("1234567890", "Description1", "A", "TypeDescription1", false);
+        // Erro encontrado: Ao tentar inserir nova vacina com um código já existente no banco de dados, o sistema não lança uma exceção e apenas atualiza os dados da vacina existente.
+        // Isto é, o newVaccine ta se comportando como um updateVaccine (upsert) ao invés de um insert.
+        // Problema que pode ocasionar: Podemos perder o registro da vacina que já existia no banco de dados, pois foi sobreescrito com os novos dados.
         testIoNewVaccineWithParams("123456890", "Description1", "A", "TypeDescription1", true);
         // Adicione mais chamadas para testIoNewVaccineWithParams aqui com diferentes parâmetros
     }
