@@ -7,6 +7,8 @@ import static org.mockito.Mockito.when;
 import java.util.Arrays;
 import java.util.Collection;
 
+import javax.annotation.PostConstruct;
+
 import org.isf.OHCoreTestCase;
 import org.isf.utils.exception.OHException;
 import org.isf.vaccine.manager.VaccineBrowserManager;
@@ -26,100 +28,63 @@ import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
 
-@RunWith(Parameterized.class)
+
 public class VaccineIoOperationsNewVaccineTest extends OHCoreTestCase {
 
-    private static TestVaccine testVaccine;
-    private static TestVaccineType testVaccineType;
+	@Autowired
+	VaccineIoOperations vaccineIoOperation;
+	@Autowired
+	VaccineIoOperationRepository vaccineIoOperationRepository;
+	@Autowired
+	VaccineTypeIoOperationRepository vaccineTypeIoOperationRepository;
+	@Autowired
+	VaccineBrowserManager vaccineBrowserManager;
 
-    @InjectMocks
-    VaccineIoOperations vaccineIoOperation;
-
-    @Mock
-    VaccineIoOperationRepository vaccineIoOperationRepository;
-
-    @Mock
-    VaccineTypeIoOperationRepository vaccineTypeIoOperationRepository;
-
-    @Autowired
-    VaccineBrowserManager vaccineBrowserManager;
-
-    private String vaccineCode;
-    private String vaccineDescription;
-    private String vaccineTypeCode;
-    private String vaccineTypeDescription;
-    private boolean vaccineAlreadyExists;
-    private boolean dbConnection;
-
-    public VaccineIoOperationsNewVaccineTest(String vaccineCode, String vaccineDescription, String vaccineTypeCode, String vaccineTypeDescription, boolean vaccineAlreadyExists, boolean dbConnection) {
-        this.vaccineCode = vaccineCode;
-        this.vaccineDescription = vaccineDescription;
-        this.vaccineTypeCode = vaccineTypeCode;
-        this.vaccineTypeDescription = vaccineTypeDescription;
-        this.vaccineAlreadyExists = vaccineAlreadyExists;
-        this.dbConnection = dbConnection;
-    }
-
-    @BeforeClass
-    public static void setUpClass() {
-        testVaccine = new TestVaccine();
-        testVaccineType = new TestVaccineType();
-    }
 
     @Before
-    public void setUp() {
-        MockitoAnnotations.initMocks(this);
-        vaccineIoOperation = new VaccineIoOperations();
-        vaccineIoOperationRepository = Mockito.mock(VaccineIoOperationRepository.class);
-    }
+	public void setUp() {
+		cleanH2InMemoryDb();
+	}
 
-    @Parameterized.Parameters
-    public static Collection<Object[]> testCases() {
-        return Arrays.asList(new Object[][] {
-            {"1234567890", "Description1", "A", "TypeDescription1", false, true}
-            // {"12345678901", "Description2", "B", "TypeDescription2", false, true},
-            // {"12345", "Description3", "C", "TypeDescription3", true, true},
-            // {"1234567890", "Description4", "D", "TypeDescription4", false, true},
-            // {"1234567890", "Description5", "E", "TypeDescription5", false, false}
-        });
-    }
 
     @Test
     public void testIoNewVaccine() throws Exception {
-        if (dbConnection) {
-            VaccineType vaccineType = testVaccineType.setup(false);
-            vaccineType.setCode(vaccineTypeCode);
-            vaccineType.setDescription(vaccineTypeDescription);
-            vaccineTypeIoOperationRepository.saveAndFlush(vaccineType);
-    
-            // Instantiate a new Vaccine object directly
-            Vaccine vaccine = new Vaccine();
-            vaccine.setCode(vaccineCode);
-            vaccine.setDescription(vaccineDescription);
-            vaccine.setVaccineType(vaccineType);
-    
-            if (vaccineAlreadyExists) {
-                vaccineIoOperationRepository.saveAndFlush(vaccine);
-            }
-            if (vaccineCode.length() > 10 || vaccineDescription.length() > 50) {
-                assertThatThrownBy(() -> {
-                    vaccineIoOperation.newVaccine(vaccine);
-                }).isInstanceOf(OHException.class);
-            } else {
-                Vaccine result = vaccineIoOperation.newVaccine(vaccine);
-                assertThat(result.getCode()).isEqualTo(vaccineCode);
-                _checkVaccineIntoDb(vaccine.getCode());
-            }
-        } else {
+        String vaccineCode = "1234567890";
+        String vaccineDescription = "Description1";
+        String vaccineTypeCode = "A";
+        String vaccineTypeDescription = "TypeDescription1";
+        boolean vaccineAlreadyExists = false;
+        VaccineType vaccineType = new VaccineType();
+        vaccineType.setCode(vaccineTypeCode);
+        vaccineType.setDescription(vaccineTypeDescription);
+        vaccineTypeIoOperationRepository.saveAndFlush(vaccineType);
+
+        // Instantiate a new Vaccine object directly
+        Vaccine vaccine = new Vaccine();
+        vaccine.setCode(vaccineCode);
+        vaccine.setDescription(vaccineDescription);
+        vaccine.setVaccineType(vaccineType);
+
+        if (vaccineAlreadyExists) {
+            vaccineIoOperationRepository.saveAndFlush(vaccine);
+        }
+        if (vaccineCode.length() > 10 || vaccineDescription.length() > 50) {
             assertThatThrownBy(() -> {
-                vaccineIoOperation.newVaccine(new Vaccine());
+                vaccineIoOperation.newVaccine(vaccine);
             }).isInstanceOf(OHException.class);
+        } else {
+            Vaccine result = vaccineIoOperation.newVaccine(vaccine);
+            assertThat(result.getCode()).isEqualTo(vaccineCode);
+            _checkVaccineIntoDb(vaccine.getCode(), vaccine.getDescription());
         }
     }
 
-    private void _checkVaccineIntoDb(String code) throws OHException {
+    private void _checkVaccineIntoDb(String code, String description) throws OHException {
         Vaccine foundVaccine = vaccineIoOperation.findVaccine(code);
-        testVaccine.check(foundVaccine);
+
+        assertThat(foundVaccine.getCode()).isEqualTo(code);
+		assertThat(foundVaccine.getDescription()).isEqualTo(description);
     }
 }
