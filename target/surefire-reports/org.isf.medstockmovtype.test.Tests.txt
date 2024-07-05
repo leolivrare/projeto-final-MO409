@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: org.isf.medstockmovtype.test.Tests
+-------------------------------------------------------------------------------
+Tests run: 22, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.096 s -- in org.isf.medstockmovtype.test.Tests
