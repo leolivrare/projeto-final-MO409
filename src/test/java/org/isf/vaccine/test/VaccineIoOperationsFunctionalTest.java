@@ -15,6 +15,7 @@ import org.isf.vaccine.service.VaccineIoOperationRepository;
 import org.isf.vaccine.service.VaccineIoOperations;
 import org.isf.vactype.model.VaccineType;
 import org.isf.vactype.service.VaccineTypeIoOperationRepository;
+import org.isf.vactype.test.TestVaccineType;
 import org.junit.Before;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,6 +23,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import java.util.logging.Logger;
 
 public class VaccineIoOperationsFunctionalTest extends OHCoreTestCase {
+
+    private static TestVaccineType testVaccineType;
 
     private static final Logger LOGGER = Logger.getLogger(VaccineIoOperationsFunctionalTest.class.getName());
 
@@ -342,6 +345,85 @@ public class VaccineIoOperationsFunctionalTest extends OHCoreTestCase {
             result = vaccineIoOperation.deleteVaccine(vaccine);
             assertThat(result).isTrue();
             result = vaccineIoOperation.isCodePresent(vaccineCode);
+            assertThat(result).isFalse();
+        }
+		
+    }
+
+    @Test
+    public void testIoIsCodePresentVaccine() throws Exception {
+        class Params {
+            String vaccineCode;
+            boolean vaccineAlreadyExists;
+
+            Params(String vaccineCode, boolean vaccineAlreadyExists) {
+                this.vaccineCode = vaccineCode;
+                this.vaccineAlreadyExists = vaccineAlreadyExists;
+            }
+        }
+
+        List<Params> paramsList = Arrays.asList(
+            /* Classe Válida 1:
+            *  - vaccineCode: string com 10 caracteres
+            *  - Vacina existe no banco de dados
+            * Resultado esperado: A função IsCodePresent deve retornar true */
+            new Params("0000000000", true),
+
+
+            /* Classe Válida 2:
+            *  - vaccineCode: string com 10 caracteres
+            *  - Vacina não existe no banco de dados
+            * Resultado esperado: A função IsCodePresent deve retornar false */
+            new Params("1111111111", false),
+
+            /* Classe Inválida 1:
+            *  - vaccineCode: string com mais de 10 caracteres
+            *  - Vacina não existe no banco de dados
+            * Resultado esperado: A função IsCodePresent deve retornar false */
+            new Params("22222222222", false),
+
+            /* Classe Inválida 2:
+            *  - vaccineCode: string vazia
+            *  - Vacina não existe no banco de dados
+            * Resultado esperado: A função IsCodePresent deve retornar false */
+            new Params("", false)
+        );
+
+        List<Throwable> exceptions = new ArrayList<>();
+
+        for (Params params : paramsList) {
+            LOGGER.info("Running test with parameters: " + params.vaccineCode + ", " + params.vaccineAlreadyExists);
+            try {
+                testIoIsCodePresentWithParams(params.vaccineCode, params.vaccineAlreadyExists);
+            } catch (org.junit.ComparisonFailure e) {
+                exceptions.add(e);
+            }
+        }
+
+        if (!exceptions.isEmpty()) {
+            AssertionError ae = new AssertionError("There were errors during the tests");
+            exceptions.forEach(ae::addSuppressed);
+            throw ae;
+        }
+    }
+
+    private void testIoIsCodePresentWithParams(String vaccineCode, boolean vaccineAlreadyExists) throws Exception {
+        VaccineType vaccineType = new VaccineType();
+        vaccineType.setCode("Z");
+        vaccineType.setDescription("Description");
+        vaccineTypeIoOperationRepository.saveAndFlush(vaccineType);
+
+        Vaccine vaccine = new Vaccine();
+        vaccine.setCode(vaccineCode);
+        vaccine.setDescription("Description");
+        vaccine.setVaccineType(vaccineType);
+
+        if (vaccineAlreadyExists) {
+            vaccineIoOperationRepository.saveAndFlush(vaccine);
+            boolean result = vaccineIoOperation.isCodePresent(vaccineCode);
+            assertThat(result).isTrue();
+        } else {
+            boolean result = vaccineIoOperation.isCodePresent(vaccineCode);
             assertThat(result).isFalse();
         }
 		
