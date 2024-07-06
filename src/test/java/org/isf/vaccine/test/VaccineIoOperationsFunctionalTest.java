@@ -21,9 +21,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.logging.Logger;
 
-public class VaccineIoOperationsNewVaccineTest extends OHCoreTestCase {
+public class VaccineIoOperationsFunctionalTest extends OHCoreTestCase {
 
-    private static final Logger LOGGER = Logger.getLogger(VaccineIoOperationsNewVaccineTest.class.getName());
+    private static final Logger LOGGER = Logger.getLogger(VaccineIoOperationsFunctionalTest.class.getName());
 
 	@Autowired
 	VaccineIoOperations vaccineIoOperation;
@@ -58,30 +58,45 @@ public class VaccineIoOperationsNewVaccineTest extends OHCoreTestCase {
         }
 
         List<Params> paramsList = Arrays.asList(
-            /* Classe Válida 1: código com 10 caracteres, descrição com 50 caracteres, tipo de vacina com 1 caracteres,
-             *  descrição do tipo de vacina com 50 caracteres, vacina ainda não existe no banco de dados
-             * Resultado esperado: A função newVaccine deve sem concluída com sucesso e o item deve ser
-             *  inserido no banco de dados*/
+            /* Classe Válida 1:
+            *  - vaccineCode: string com 10 caracteres
+            *  - vaccineDescription: string com 50 caracteres
+            *  - vaccineTypeCode: string com 1 caractere
+            *  - vaccineTypeDescription: string com 50 caracteres
+            *  - Vacina ainda não existe no banco de dados
+            * Resultado esperado: A função newVaccine deve ser concluída com sucesso e o item deve ser inserido no banco de dados */
             new Params("1234567890", String.format("%-50s", "Description").replace(' ', 'a'), "A", String.format("%-50s", "TypeDescription").replace(' ', 'a'), false),
 
-            /* Classe Inválida 1: código com 10 caracteres, descrição com 50 caracteres, tipo de vacina com 1 caracteres
-             *  descrição do tipo de vacina com 50 caracteres, vacina já existe no banco de dados
-             * Resultado esperado: A função newVaccine deve falhar, pois o item já existe no banco de dados*/
-            /* Erro Encontrado: a função newVaccine não quebra ao tentar inserir um item que já existe.
-             *  Ao invés disso, ela atualiza o item já existente. Isso resulta num problema de integridade de dados,
-             *  pois perdemos as informações do item já existente.*/
+            /* Classe Inválida 1:
+            *  - vaccineCode: string com 10 caracteres
+            *  - vaccineDescription: string com 50 caracteres
+            *  - vaccineTypeCode: string com 1 caractere
+            *  - vaccineTypeDescription: string com 50 caracteres
+            *  - Vacina já existe no banco de dados
+            * Resultado esperado: A função newVaccine deve falhar, pois o item já existe no banco de dados
+            * Erro Encontrado: a função newVaccine não quebra ao tentar inserir um item que já existe.
+            * Ao invés disso, ela atualiza o item já existente. Isso resulta num problema de integridade de dados,
+            * pois perdemos as informações do item já existente. */
             new Params("0000000000", String.format("%-50s", "Description").replace(' ', 'a'), "A", String.format("%-50s", "TypeDescription").replace(' ', 'a'), true),
             
-            /* Classe Inválida 2: código com 11 caracteres, descrição com 50 caracteres, tipo de vacina com 1 caracteres,
-             *  descrição do tipo de vacina com 50 caracteres, vacina ainda não existe no banco de dados.
-             * Resultado esperado: A função newVaccine deve falhar por tentar adicionar o campo vaccineCode no banco,
-             *  mas existe uma constraint que não permite string maior que 10 caracteres.*/
+            /* Classe Inválida 2:
+            *  - vaccineCode: string com 11 caracteres
+            *  - vaccineDescription: string com 50 caracteres
+            *  - vaccineTypeCode: string com 1 caractere
+            *  - vaccineTypeDescription: string com 50 caracteres
+            *  - Vacina ainda não existe no banco de dados
+            * Resultado esperado: A função newVaccine deve falhar por tentar adicionar o campo vaccineCode no banco,
+            * mas existe uma constraint que não permite string maior que 10 caracteres. */
             new Params("00000000001", String.format("%-50s", "Description").replace(' ', 'a'), "A", String.format("%-50s", "TypeDescription").replace(' ', 'a'), false),
 
-            /* Classe Inválida 3: código com 10 caracteres, descrição com mais de 50 caracteres, tipo de vacina com 1 caracteres,
-             *  descrição do tipo de vacina com 50 caracteres, vacina ainda não existe no banco de dados.
-             * Resultado esperado: A função newVaccine deve falhar por tentar adicionar o campo vaccineDescription no banco,
-             *  mas existe uma constraint que não permite string maior que 50 caracteres.*/
+            /* Classe Inválida 3:
+            *  - vaccineCode: string com 10 caracteres
+            *  - vaccineDescription: string com mais de 50 caracteres
+            *  - vaccineTypeCode: string com 1 caractere
+            *  - vaccineTypeDescription: string com 50 caracteres
+            *  - Vacina ainda não existe no banco de dados
+            * Resultado esperado: A função newVaccine deve falhar por tentar adicionar o campo vaccineDescription no banco,
+            * mas existe uma constraint que não permite string maior que 50 caracteres. */
             new Params("1111111111", String.format("%-51s", "Description").replace(' ', 'a'), "A", String.format("%-50s", "TypeDescription").replace(' ', 'a'), false)
         );
 
@@ -109,7 +124,6 @@ public class VaccineIoOperationsNewVaccineTest extends OHCoreTestCase {
         vaccineType.setDescription(vaccineTypeDescription);
         vaccineTypeIoOperationRepository.saveAndFlush(vaccineType);
 
-        // Instantiate a new Vaccine object directly
         Vaccine vaccine = new Vaccine();
         vaccine.setCode(vaccineCode);
         vaccine.setDescription(vaccineDescription);
@@ -131,7 +145,6 @@ public class VaccineIoOperationsNewVaccineTest extends OHCoreTestCase {
             assertThat(result.getCode()).isEqualTo(vaccineCode);
             _checkVaccineIntoDb(vaccine.getCode(), checkDescription);
 
-            // Check if there is more than one record in the vaccine table with the same code
             long count = vaccineIoOperationRepository.findAll().stream()
                 .filter(v -> v.getCode().equals(vaccineCode))
                 .count();
