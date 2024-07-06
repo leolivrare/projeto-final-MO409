@@ -351,7 +351,7 @@ public class VaccineIoOperationsFunctionalTest extends OHCoreTestCase {
     }
 
     @Test
-    public void testIoIsCodePresentVaccine() throws Exception {
+    public void testIoIsCodePresent() throws Exception {
         class Params {
             String vaccineCode;
             boolean vaccineAlreadyExists;
@@ -425,6 +425,86 @@ public class VaccineIoOperationsFunctionalTest extends OHCoreTestCase {
         } else {
             boolean result = vaccineIoOperation.isCodePresent(vaccineCode);
             assertThat(result).isFalse();
+        }
+		
+    }
+
+    @Test
+    public void testIoFindVaccine() throws Exception {
+        class Params {
+            String vaccineCode;
+            boolean vaccineAlreadyExists;
+
+            Params(String vaccineCode, boolean vaccineAlreadyExists) {
+                this.vaccineCode = vaccineCode;
+                this.vaccineAlreadyExists = vaccineAlreadyExists;
+            }
+        }
+
+        List<Params> paramsList = Arrays.asList(
+            /* Classe Válida 1:
+            *  - vaccineCode: string com 10 caracteres
+            *  - Vacina existe no banco de dados
+            * Resultado esperado: A função findVaccine deve retornar a vacina */
+            new Params("0000000000", true),
+
+
+            /* Classe Válida 2:
+            *  - vaccineCode: string com 10 caracteres
+            *  - Vacina não existe no banco de dados
+            * Resultado esperado: A função findVaccine deve retornar null */
+            new Params("1111111111", false),
+
+            /* Classe Inválida 1:
+            *  - vaccineCode: string com mais de 10 caracteres
+            *  - Vacina não existe no banco de dados
+            * Resultado esperado: A função findVaccine deve retornar null */
+            new Params("22222222222", false),
+
+            /* Classe Inválida 2:
+            *  - vaccineCode: string vazia
+            *  - Vacina não existe no banco de dados
+            * Resultado esperado: A função findVaccine deve retornar null */
+            new Params("", false)
+        );
+
+        List<Throwable> exceptions = new ArrayList<>();
+
+        for (Params params : paramsList) {
+            LOGGER.info("Running test with parameters: " + params.vaccineCode + ", " + params.vaccineAlreadyExists);
+            try {
+                testIofindVaccineWithParams(params.vaccineCode, params.vaccineAlreadyExists);
+            } catch (org.junit.ComparisonFailure e) {
+                exceptions.add(e);
+            }
+        }
+
+        if (!exceptions.isEmpty()) {
+            AssertionError ae = new AssertionError("There were errors during the tests");
+            exceptions.forEach(ae::addSuppressed);
+            throw ae;
+        }
+    }
+
+    private void testIofindVaccineWithParams(String vaccineCode, boolean vaccineAlreadyExists) throws Exception {
+        VaccineType vaccineType = new VaccineType();
+        vaccineType.setCode("Z");
+        vaccineType.setDescription("Description");
+        vaccineTypeIoOperationRepository.saveAndFlush(vaccineType);
+
+        Vaccine vaccine = new Vaccine();
+        vaccine.setCode(vaccineCode);
+        vaccine.setDescription("Description");
+        vaccine.setVaccineType(vaccineType);
+
+        if (vaccineAlreadyExists) {
+            vaccineIoOperationRepository.saveAndFlush(vaccine);
+            Vaccine foundVaccine = vaccineIoOperation.findVaccine(vaccineCode);
+            assertThat(foundVaccine).isNotNull();
+		    assertThat(foundVaccine.getCode()).isEqualTo(vaccineCode);
+        } else {
+            Vaccine foundVaccine = vaccineIoOperation.findVaccine(vaccineCode);
+            assertThat(foundVaccine).isNull();
         }
 		
     }
