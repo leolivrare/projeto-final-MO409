@@ -59,10 +59,10 @@ public class VaccineIoOperationsTest extends OHCoreTestCase {
     private boolean existsInDb;
     private boolean dbIsOn;
 
-	@PostConstruct
-    public void init() {
-        cleanH2InMemoryDb();
-    }
+	// @PostConstruct
+    // public void init() {
+    //     cleanH2InMemoryDb();
+    // }
 
     @BeforeClass
     public static void setUpClass() {

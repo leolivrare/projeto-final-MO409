@@ -50,9 +50,19 @@ public abstract class OHCoreTestCase {
 		entityManager.close();
 	}
 
+	public void cleanMySQLDb() {
+		EntityManager entityManager = entityManagerFactory.createEntityManager();
+		entityManager.getTransaction().begin();
+		List<String> show_tables = entityManager.createNativeQuery("SHOW TABLES").getResultList();
+		entityManager.createNativeQuery("SET FOREIGN_KEY_CHECKS = 0").executeUpdate();
+		show_tables
+				.forEach(s -> truncateTable(s, entityManager));
+		entityManager.createNativeQuery("SET FOREIGN_KEY_CHECKS = 1").executeUpdate();
+		entityManager.getTransaction().commit();
+		entityManager.close();
+	}
+	
 	public void truncateTable(String name, EntityManager entityManager) {
-		entityManager.createNativeQuery("SET REFERENTIAL_INTEGRITY FALSE").executeUpdate();
 		entityManager.createNativeQuery("TRUNCATE TABLE " + name).executeUpdate();
-		entityManager.createNativeQuery("SET REFERENTIAL_INTEGRITY TRUE").executeUpdate();
 	}
 }

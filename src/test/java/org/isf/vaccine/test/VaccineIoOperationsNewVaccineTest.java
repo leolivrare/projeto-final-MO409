@@ -18,6 +18,10 @@ import org.isf.vactype.service.VaccineTypeIoOperationRepository;
 import org.junit.Before;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManager;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.transaction.annotation.Transactional;
+import org.springframework.boot.test.autoconfigure.orm.jpa.AutoConfigureTestEntityManager;
 
 import java.util.logging.Logger;
 
@@ -35,11 +39,10 @@ public class VaccineIoOperationsNewVaccineTest extends OHCoreTestCase {
 	@Autowired
 	VaccineBrowserManager vaccineBrowserManager;
 
-
     @Before
-	public void setUp() {
-		cleanH2InMemoryDb();
-	}
+    public void setUp() {
+        cleanMySQLDb();
+    }
 
     @Test
     public void testIoNewVaccine() throws Exception {
@@ -60,9 +63,14 @@ public class VaccineIoOperationsNewVaccineTest extends OHCoreTestCase {
         }
 
         List<Params> paramsList = Arrays.asList(
-            new Params("123456890", "Description1", "A", "TypeDescription1", true),
-            new Params("1234567890", "Description1", "A", "TypeDescription1", false)
-                        // Add more parameters here
+            // Classe Válida 1: código com 10 caracteres, descrição com 50 caracteres, tipo de vacina com 1 caracteres, descrição do tipo de vacina com 50 caracteres, vacina ainda não existe no banco de dados
+            new Params("1234567890", String.format("%-50s", "Description").replace(' ', 'a'), "A", String.format("%-50s", "TypeDescription").replace(' ', 'a'), false),
+
+            // Classe Inválida 1:código com 10 caracteres, descrição com 50 caracteres, tipo de vacina com 1 caracteres, descrição do tipo de vacina com 50 caracteres, vacina já existe no banco de dados
+            new Params("0000000000", String.format("%-50s", "Description").replace(' ', 'a'), "A", String.format("%-50s", "TypeDescription").replace(' ', 'a'), true),
+            
+            // Classe Inválida 2: código com 11 caracteres, descrição com 50 caracteres, tipo de vacina com 1 caracteres, descrição do tipo de vacina com 50 caracteres, vacina ainda não existe no banco de dados
+            new Params("00000000001", String.format("%-50s", "Description").replace(' ', 'a'), "A", String.format("%-50s", "TypeDescription").replace(' ', 'a'), false)
         );
 
         List<Throwable> exceptions = new ArrayList<>();
@@ -105,7 +113,7 @@ public class VaccineIoOperationsNewVaccineTest extends OHCoreTestCase {
         if (vaccineCode.length() > 10 || vaccineDescription.length() > 50) {
             assertThatThrownBy(() -> {
                 vaccineIoOperation.newVaccine(vaccine);
-            }).isInstanceOf(OHException.class);
+            }).isInstanceOf(org.isf.utils.exception.OHDataIntegrityViolationException.class);
         } else {
             Vaccine result = vaccineIoOperation.newVaccine(vaccine);
             assertThat(result.getCode()).isEqualTo(vaccineCode);
@@ -121,7 +129,7 @@ public class VaccineIoOperationsNewVaccineTest extends OHCoreTestCase {
 
     private void _checkVaccineIntoDb(String code, String description) throws OHException {
         Vaccine foundVaccine = vaccineIoOperation.findVaccine(code);
-
+        LOGGER.info("Found vaccine: " + foundVaccine.getCode());
         assertThat(foundVaccine.getCode()).isEqualTo(code);
 		assertThat(foundVaccine.getDescription()).isEqualTo(description);
     }
