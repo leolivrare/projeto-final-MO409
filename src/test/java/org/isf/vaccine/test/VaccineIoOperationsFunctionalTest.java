@@ -473,7 +473,7 @@ public class VaccineIoOperationsFunctionalTest extends OHCoreTestCase {
         for (Params params : paramsList) {
             LOGGER.info("Running test with parameters: " + params.vaccineCode + ", " + params.vaccineAlreadyExists);
             try {
-                testIofindVaccineWithParams(params.vaccineCode, params.vaccineAlreadyExists);
+                testIoFindVaccineWithParams(params.vaccineCode, params.vaccineAlreadyExists);
             } catch (org.junit.ComparisonFailure e) {
                 exceptions.add(e);
             }
@@ -486,7 +486,7 @@ public class VaccineIoOperationsFunctionalTest extends OHCoreTestCase {
         }
     }
 
-    private void testIofindVaccineWithParams(String vaccineCode, boolean vaccineAlreadyExists) throws Exception {
+    private void testIoFindVaccineWithParams(String vaccineCode, boolean vaccineAlreadyExists) throws Exception {
         VaccineType vaccineType = new VaccineType();
         vaccineType.setCode("Z");
         vaccineType.setDescription("Description");
@@ -505,6 +505,78 @@ public class VaccineIoOperationsFunctionalTest extends OHCoreTestCase {
         } else {
             Vaccine foundVaccine = vaccineIoOperation.findVaccine(vaccineCode);
             assertThat(foundVaccine).isNull();
+        }
+		
+    }
+
+    @Test
+    public void testIoGetVaccine() throws Exception {
+        class Params {
+            String vaccineCode;
+            String vaccineTypeCode;
+            boolean vaccineAlreadyExists;
+
+            Params(String vaccineCode, String vaccineTypeCode, boolean vaccineAlreadyExists) {
+                this.vaccineCode = vaccineCode;
+                this.vaccineTypeCode = vaccineTypeCode;
+                this.vaccineAlreadyExists = vaccineAlreadyExists;
+            }
+        }
+
+        List<Params> paramsList = Arrays.asList(
+            /* Classe Válida 1:
+            *  - vaccineCode: string com 10 caracteres
+            *  - Vacina existe no banco de dados
+            * Resultado esperado: A função getVaccine deve retornar a vacina */
+            new Params("0000000000", "Z", true),
+
+
+            /* Classe Válida 2:
+            *  - vaccineCode: string com 10 caracteres
+            *  - Vacina não existe no banco de dados
+            * Resultado esperado: A função getVaccine deve retornar vazio */
+            new Params("1111111111", "X", false)
+        );
+
+        List<Throwable> exceptions = new ArrayList<>();
+
+        for (Params params : paramsList) {
+            LOGGER.info("Running test with parameters: " + params.vaccineCode + ", " + params.vaccineAlreadyExists);
+            try {
+                testIoGetVaccineWithParams(params.vaccineCode, params.vaccineTypeCode, params.vaccineAlreadyExists);
+            } catch (org.junit.ComparisonFailure e) {
+                exceptions.add(e);
+            }
+        }
+
+        if (!exceptions.isEmpty()) {
+            AssertionError ae = new AssertionError("There were errors during the tests");
+            exceptions.forEach(ae::addSuppressed);
+            throw ae;
+        }
+    }
+
+    private void testIoGetVaccineWithParams(String vaccineCode, String vaccineTypeCode, boolean vaccineAlreadyExists) throws Exception {
+        VaccineType vaccineType = new VaccineType();
+        vaccineType.setCode("Z");
+        vaccineType.setDescription("TypeDescription");
+        
+        Vaccine vaccine = new Vaccine();
+        if (vaccineCode == null){
+            vaccine.setCode("1234567890");
+        }
+        vaccine.setCode(vaccineCode);
+        vaccine.setDescription("Description");
+        vaccine.setVaccineType(vaccineType);
+
+        if (vaccineAlreadyExists) {
+            vaccineTypeIoOperationRepository.saveAndFlush(vaccineType);
+            vaccineIoOperationRepository.saveAndFlush(vaccine);
+            List<Vaccine> vaccines = vaccineIoOperation.getVaccine(vaccineTypeCode);
+            assertThat(vaccines.get(vaccines.size() - 1).getDescription()).isEqualTo(vaccine.getDescription());
+        } else {
+            List<Vaccine> vaccines = vaccineIoOperation.getVaccine(vaccineTypeCode);
+            assertThat(vaccines).isEmpty();
         }
 		
     }
