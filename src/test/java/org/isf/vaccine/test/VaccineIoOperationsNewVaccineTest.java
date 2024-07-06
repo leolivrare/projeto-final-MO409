@@ -3,6 +3,10 @@ package org.isf.vaccine.test;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Arrays;
+
 import org.isf.OHCoreTestCase;
 import org.isf.utils.exception.OHException;
 import org.isf.vaccine.manager.VaccineBrowserManager;
@@ -15,8 +19,12 @@ import org.junit.Before;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
+import java.util.logging.Logger;
+
 
 public class VaccineIoOperationsNewVaccineTest extends OHCoreTestCase {
+
+    private static final Logger LOGGER = Logger.getLogger(VaccineIoOperationsNewVaccineTest.class.getName());
 
 	@Autowired
 	VaccineIoOperations vaccineIoOperation;
@@ -35,12 +43,44 @@ public class VaccineIoOperationsNewVaccineTest extends OHCoreTestCase {
 
     @Test
     public void testIoNewVaccine() throws Exception {
-        testIoNewVaccineWithParams("1234567890", "Description1", "A", "TypeDescription1", false);
-        // Erro encontrado: Ao tentar inserir nova vacina com um código já existente no banco de dados, o sistema não lança uma exceção e apenas atualiza os dados da vacina existente.
-        // Isto é, o newVaccine ta se comportando como um updateVaccine (upsert) ao invés de um insert.
-        // Problema que pode ocasionar: Podemos perder o registro da vacina que já existia no banco de dados, pois foi sobreescrito com os novos dados.
-        testIoNewVaccineWithParams("123456890", "Description1", "A", "TypeDescription1", true);
-        // Adicione mais chamadas para testIoNewVaccineWithParams aqui com diferentes parâmetros
+        class Params {
+            String vaccineCode;
+            String vaccineDescription;
+            String vaccineTypeCode;
+            String vaccineTypeDescription;
+            boolean vaccineAlreadyExists;
+
+            Params(String vaccineCode, String vaccineDescription, String vaccineTypeCode, String vaccineTypeDescription, boolean vaccineAlreadyExists) {
+                this.vaccineCode = vaccineCode;
+                this.vaccineDescription = vaccineDescription;
+                this.vaccineTypeCode = vaccineTypeCode;
+                this.vaccineTypeDescription = vaccineTypeDescription;
+                this.vaccineAlreadyExists = vaccineAlreadyExists;
+            }
+        }
+
+        List<Params> paramsList = Arrays.asList(
+            new Params("123456890", "Description1", "A", "TypeDescription1", true),
+            new Params("1234567890", "Description1", "A", "TypeDescription1", false)
+                        // Add more parameters here
+        );
+
+        List<Throwable> exceptions = new ArrayList<>();
+
+        for (Params params : paramsList) {
+            LOGGER.info("Running test with parameters: " + params.vaccineCode + ", " + params.vaccineDescription + ", " + params.vaccineTypeCode + ", " + params.vaccineTypeDescription + ", " + params.vaccineAlreadyExists);
+            try {
+                testIoNewVaccineWithParams(params.vaccineCode, params.vaccineDescription, params.vaccineTypeCode, params.vaccineTypeDescription, params.vaccineAlreadyExists);
+            } catch (org.junit.ComparisonFailure e) {
+                exceptions.add(e);
+            }
+        }
+
+        if (!exceptions.isEmpty()) {
+            AssertionError ae = new AssertionError("There were errors during the tests");
+            exceptions.forEach(ae::addSuppressed);
+            throw ae;
+        }
     }
 
     private void testIoNewVaccineWithParams(String vaccineCode, String vaccineDescription, String vaccineTypeCode, String vaccineTypeDescription, boolean vaccineAlreadyExists) throws Exception {
