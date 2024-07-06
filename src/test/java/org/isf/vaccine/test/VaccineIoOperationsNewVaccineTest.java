@@ -18,13 +18,8 @@ import org.isf.vactype.service.VaccineTypeIoOperationRepository;
 import org.junit.Before;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManager;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.transaction.annotation.Transactional;
-import org.springframework.boot.test.autoconfigure.orm.jpa.AutoConfigureTestEntityManager;
 
 import java.util.logging.Logger;
-
 
 public class VaccineIoOperationsNewVaccineTest extends OHCoreTestCase {
 
@@ -63,14 +58,31 @@ public class VaccineIoOperationsNewVaccineTest extends OHCoreTestCase {
         }
 
         List<Params> paramsList = Arrays.asList(
-            // Classe Válida 1: código com 10 caracteres, descrição com 50 caracteres, tipo de vacina com 1 caracteres, descrição do tipo de vacina com 50 caracteres, vacina ainda não existe no banco de dados
+            /* Classe Válida 1: código com 10 caracteres, descrição com 50 caracteres, tipo de vacina com 1 caracteres,
+             *  descrição do tipo de vacina com 50 caracteres, vacina ainda não existe no banco de dados
+             * Resultado esperado: A função newVaccine deve sem concluída com sucesso e o item deve ser
+             *  inserido no banco de dados*/
             new Params("1234567890", String.format("%-50s", "Description").replace(' ', 'a'), "A", String.format("%-50s", "TypeDescription").replace(' ', 'a'), false),
 
-            // Classe Inválida 1:código com 10 caracteres, descrição com 50 caracteres, tipo de vacina com 1 caracteres, descrição do tipo de vacina com 50 caracteres, vacina já existe no banco de dados
+            /* Classe Inválida 1: código com 10 caracteres, descrição com 50 caracteres, tipo de vacina com 1 caracteres
+             *  descrição do tipo de vacina com 50 caracteres, vacina já existe no banco de dados
+             * Resultado esperado: A função newVaccine deve falhar, pois o item já existe no banco de dados*/
+            /* Erro Encontrado: a função newVaccine não quebra ao tentar inserir um item que já existe.
+             *  Ao invés disso, ela atualiza o item já existente. Isso resulta num problema de integridade de dados,
+             *  pois perdemos as informações do item já existente.*/
             new Params("0000000000", String.format("%-50s", "Description").replace(' ', 'a'), "A", String.format("%-50s", "TypeDescription").replace(' ', 'a'), true),
             
-            // Classe Inválida 2: código com 11 caracteres, descrição com 50 caracteres, tipo de vacina com 1 caracteres, descrição do tipo de vacina com 50 caracteres, vacina ainda não existe no banco de dados
-            new Params("00000000001", String.format("%-50s", "Description").replace(' ', 'a'), "A", String.format("%-50s", "TypeDescription").replace(' ', 'a'), false)
+            /* Classe Inválida 2: código com 11 caracteres, descrição com 50 caracteres, tipo de vacina com 1 caracteres,
+             *  descrição do tipo de vacina com 50 caracteres, vacina ainda não existe no banco de dados.
+             * Resultado esperado: A função newVaccine deve falhar por tentar adicionar o campo vaccineCode no banco,
+             *  mas existe uma constraint que não permite string maior que 10 caracteres.*/
+            new Params("00000000001", String.format("%-50s", "Description").replace(' ', 'a'), "A", String.format("%-50s", "TypeDescription").replace(' ', 'a'), false),
+
+            /* Classe Inválida 3: código com 10 caracteres, descrição com mais de 50 caracteres, tipo de vacina com 1 caracteres,
+             *  descrição do tipo de vacina com 50 caracteres, vacina ainda não existe no banco de dados.
+             * Resultado esperado: A função newVaccine deve falhar por tentar adicionar o campo vaccineDescription no banco,
+             *  mas existe uma constraint que não permite string maior que 50 caracteres.*/
+            new Params("1111111111", String.format("%-51s", "Description").replace(' ', 'a'), "A", String.format("%-50s", "TypeDescription").replace(' ', 'a'), false)
         );
 
         List<Throwable> exceptions = new ArrayList<>();
