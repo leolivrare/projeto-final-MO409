@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: org.isf.dicom.test.Tests
 -------------------------------------------------------------------------------
-Tests run: 22, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0.439 s -- in org.isf.dicom.test.Tests
+Tests run: 22, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 18.25 s -- in org.isf.dicom.test.Tests

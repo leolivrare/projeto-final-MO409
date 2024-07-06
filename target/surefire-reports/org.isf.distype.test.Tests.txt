@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: org.isf.distype.test.Tests
 -------------------------------------------------------------------------------
-Tests run: 17, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.478 s -- in org.isf.distype.test.Tests
+Tests run: 17, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 12.05 s -- in org.isf.distype.test.Tests

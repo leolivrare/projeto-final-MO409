@@ -1,0 +1,227 @@
+# Created at 2024-07-06T14:16:04.635
+Exiting self fork JVM. Received SHUTDOWN command from Maven shutdown hook.
+Thread dump before exiting the process (807375@BRSAOLN042480):
+"Thread-12" 
+   java.lang.Thread.State: RUNNABLE
+        at java.util.concurrent.ConcurrentHashMap.replaceNode(ConcurrentHashMap.java:1117)
+        at java.util.concurrent.ConcurrentHashMap.remove(ConcurrentHashMap.java:1097)
+        at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.removeSingleton(DefaultSingletonBeanRegistry.java:284)
+        at org.springframework.beans.factory.support.FactoryBeanRegistrySupport.removeSingleton(FactoryBeanRegistrySupport.java:232)
+        at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.removeSingleton(AbstractAutowireCapableBeanFactory.java:1774)
+        at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:548)
+        at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:958)
+        at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:516)
+        at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:965)
+        at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1034)
+        at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1009)
+        at org.springframework.context.support.AbstractApplicationContext$2.run(AbstractApplicationContext.java:929)
+
+"Thread-6" 
+   java.lang.Thread.State: RUNNABLE
+        at java.util.concurrent.ConcurrentHashMap.clear(ConcurrentHashMap.java:1193)
+        at org.springframework.beans.factory.support.DefaultListableBeanFactory.clearByTypeCache(DefaultListableBeanFactory.java:974)
+        at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:960)
+        at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:576)
+        at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:555)
+        at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:958)
+        at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:598)
+        at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:555)
+        at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:958)
+        at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:576)
+        at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:555)
+        at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:958)
+        at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:516)
+        at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:965)
+        at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1034)
+        at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1009)
+        at org.springframework.context.support.AbstractApplicationContext$2.run(AbstractApplicationContext.java:929)
+
+"SIGINT handler" 
+   java.lang.Thread.State: WAITING
+        at java.lang.Object.wait(Native Method)
+        at java.lang.Thread.join(Thread.java:1257)
+        at java.lang.Thread.join(Thread.java:1331)
+        at java.lang.ApplicationShutdownHooks.runHooks(ApplicationShutdownHooks.java:107)
+        at java.lang.ApplicationShutdownHooks$1.run(ApplicationShutdownHooks.java:46)
+        at java.lang.Shutdown.runHooks(Shutdown.java:130)
+        at java.lang.Shutdown.exit(Shutdown.java:178)
+        at java.lang.Terminator$1.handle(Terminator.java:52)
+        at sun.misc.Signal$1.run(Signal.java:212)
+        at java.lang.Thread.run(Thread.java:750)
+
+"C3P0PooledConnectionPoolManager[identityToken->z8kfsxb4120jh1qho7l2m|79cc5362]-HelperThread-#2" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.lang.Object.wait(Native Method)
+        at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:635)
+
+"C3P0PooledConnectionPoolManager[identityToken->z8kfsxb4120jh1qho7l2m|79cc5362]-HelperThread-#1" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.lang.Object.wait(Native Method)
+        at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:635)
+
+"C3P0PooledConnectionPoolManager[identityToken->z8kfsxb4120jh1qho7l2m|79cc5362]-HelperThread-#0" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.lang.Object.wait(Native Method)
+        at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:635)
+
+"C3P0PooledConnectionPoolManager[identityToken->z8kfsxb4120jh1qho7l2m|79cc5362]-AdminTaskTimer" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.lang.Object.wait(Native Method)
+        at java.util.TimerThread.mainLoop(Timer.java:552)
+        at java.util.TimerThread.run(Timer.java:505)
+
+"Java2D Disposer" 
+   java.lang.Thread.State: WAITING
+        at java.lang.Object.wait(Native Method)
+        at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:144)
+        at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:165)
+        at sun.java2d.Disposer.run(Disposer.java:148)
+        at java.lang.Thread.run(Thread.java:750)
+
+"C3P0PooledConnectionPoolManager[identityToken->z8kfsxb4120jh1qho7l2m|2f5c1332]-HelperThread-#2" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.lang.Object.wait(Native Method)
+        at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:635)
+
+"C3P0PooledConnectionPoolManager[identityToken->z8kfsxb4120jh1qho7l2m|2f5c1332]-HelperThread-#1" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.lang.Object.wait(Native Method)
+        at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:635)
+
+"C3P0PooledConnectionPoolManager[identityToken->z8kfsxb4120jh1qho7l2m|2f5c1332]-HelperThread-#0" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.lang.Object.wait(Native Method)
+        at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:635)
+
+"C3P0PooledConnectionPoolManager[identityToken->z8kfsxb4120jh1qho7l2m|2f5c1332]-AdminTaskTimer" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.lang.Object.wait(Native Method)
+        at java.util.TimerThread.mainLoop(Timer.java:552)
+        at java.util.TimerThread.run(Timer.java:505)
+
+"surefire-forkedjvm-command-thread" 
+   java.lang.Thread.State: RUNNABLE
+        at sun.management.ThreadImpl.getThreadInfo1(Native Method)
+        at sun.management.ThreadImpl.getThreadInfo(ThreadImpl.java:185)
+        at org.apache.maven.surefire.booter.ForkedBooter.generateThreadDump(ForkedBooter.java:579)
+        at org.apache.maven.surefire.booter.ForkedBooter.access$600(ForkedBooter.java:79)
+        at org.apache.maven.surefire.booter.ForkedBooter$4.update(ForkedBooter.java:315)
+        at org.apache.maven.surefire.booter.CommandReader$CommandRunnable.callListeners(CommandReader.java:357)
+        at org.apache.maven.surefire.booter.CommandReader$CommandRunnable.exitByConfiguration(CommandReader.java:367)
+        at org.apache.maven.surefire.booter.CommandReader$CommandRunnable.run(CommandReader.java:330)
+        at java.lang.Thread.run(Thread.java:750)
+
+"surefire-forkedjvm-stream-flusher" 
+   java.lang.Thread.State: TIMED_WAITING
+        at sun.misc.Unsafe.park(Native Method)
+        at java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+        at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
+        at java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1093)
+        at java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:809)
+        at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
+        at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+        at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+        at java.lang.Thread.run(Thread.java:750)
+
+"Signal Dispatcher" 
+   java.lang.Thread.State: RUNNABLE
+
+"Finalizer" 
+   java.lang.Thread.State: WAITING
+        at java.lang.Object.wait(Native Method)
+        at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:144)
+        at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:165)
+        at java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:188)
+
+"Reference Handler" 
+   java.lang.Thread.State: WAITING
+        at java.lang.Object.wait(Native Method)
+        at java.lang.Object.wait(Object.java:502)
+        at java.lang.ref.Reference.tryHandlePending(Reference.java:191)
+        at java.lang.ref.Reference$ReferenceHandler.run(Reference.java:153)
+
+"main" 
+   java.lang.Thread.State: RUNNABLE
+        at java.net.SocketInputStream.socketRead0(Native Method)
+        at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+        at java.net.SocketInputStream.read(SocketInputStream.java:171)
+        at java.net.SocketInputStream.read(SocketInputStream.java:141)
+        at com.mysql.jdbc.util.ReadAheadInputStream.fill(ReadAheadInputStream.java:114)
+        at com.mysql.jdbc.util.ReadAheadInputStream.readFromUnderlyingStreamIfNecessary(ReadAheadInputStream.java:161)
+        at com.mysql.jdbc.util.ReadAheadInputStream.read(ReadAheadInputStream.java:189)
+        at com.mysql.jdbc.MysqlIO.readFully(MysqlIO.java:2526)
+        at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:2979)
+        at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:2968)
+        at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3516)
+        at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:1986)
+        at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2140)
+        at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2626)
+        at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:2111)
+        at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:2407)
+        at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:2325)
+        at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:2310)
+        at com.mchange.v2.c3p0.impl.NewProxyPreparedStatement.executeUpdate(NewProxyPreparedStatement.java:147)
+        at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:186)
+        at org.hibernate.engine.query.spi.NativeSQLQueryPlan.performExecuteUpdate(NativeSQLQueryPlan.java:204)
+        at org.hibernate.internal.SessionImpl.executeNativeUpdate(SessionImpl.java:1238)
+        at org.hibernate.internal.SQLQueryImpl.executeUpdate(SQLQueryImpl.java:401)
+        at org.hibernate.ejb.QueryImpl.internalExecuteUpdate(QueryImpl.java:198)
+        at org.hibernate.ejb.AbstractQueryImpl.executeUpdate(AbstractQueryImpl.java:99)
+        at org.isf.OHCoreTestCase.truncateTable(OHCoreTestCase.java:66)
+        at org.isf.OHCoreTestCase.lambda$cleanH2InMemoryDb$0(OHCoreTestCase.java:47)
+        at org.isf.OHCoreTestCase$$Lambda$10/1282393063.accept(Unknown Source)
+        at java.util.ArrayList.forEach(ArrayList.java:1259)
+        at org.isf.OHCoreTestCase.cleanH2InMemoryDb(OHCoreTestCase.java:47)
+        at org.isf.medicalstock.test.Tests.setUp(Tests.java:146)
+        at sun.reflect.GeneratedMethodAccessor142.invoke(Unknown Source)
+        at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+        at java.lang.reflect.Method.invoke(Method.java:498)
+        at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+        at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+        at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+        at org.junit.internal.runners.statements.RunBefores.invokeMethod(RunBefores.java:33)
+        at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:24)
+        at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:75)
+        at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:86)
+        at org.springframework.test.context.junit4.statements.RunPrepareTestInstanceCallbacks.evaluate(RunPrepareTestInstanceCallbacks.java:64)
+        at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:84)
+        at org.springframework.test.context.junit4.statements.SpringFailOnTimeout.evaluate(SpringFailOnTimeout.java:87)
+        at org.springframework.test.context.junit4.statements.ProfileValueChecker.evaluate(ProfileValueChecker.java:101)
+        at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+        at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+        at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+        at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+        at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+        at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+        at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+        at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+        at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+        at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+        at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+        at org.junit.runners.Suite.runChild(Suite.java:128)
+        at org.junit.runners.Suite.runChild(Suite.java:27)
+        at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+        at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+        at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+        at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+        at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+        at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+        at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+        at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+        at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+        at org.springframework.test.context.junit4.statements.ProfileValueChecker.evaluate(ProfileValueChecker.java:101)
+        at org.springframework.test.context.junit4.rules.SpringClassRule$TestContextManagerCacheEvictor.evaluate(SpringClassRule.java:242)
+        at org.junit.rules.RunRules.evaluate(RunRules.java:20)
+        at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+        at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+        at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:316)
+        at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:240)
+        at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:214)
+        at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:155)
+        at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+        at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+        at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+        at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+
+
+

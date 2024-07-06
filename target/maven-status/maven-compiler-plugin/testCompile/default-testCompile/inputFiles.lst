@@ -47,6 +47,7 @@
 /home/leonardo.lmartins/Documentos/projeto-final-MO409/src/test/java/org/isf/hospital/test/Tests.java
 /home/leonardo.lmartins/Documentos/projeto-final-MO409/src/test/java/org/isf/patvac/test/Tests.java
 /home/leonardo.lmartins/Documentos/projeto-final-MO409/src/test/java/org/isf/visits/test/Tests.java
+/home/leonardo.lmartins/Documentos/projeto-final-MO409/src/test/java/org/isf/vaccine/test/VaccineIoOperationsFunctionalTest.java
 /home/leonardo.lmartins/Documentos/projeto-final-MO409/src/test/java/org/isf/medicalstock/test/TestLot.java
 /home/leonardo.lmartins/Documentos/projeto-final-MO409/src/test/java/org/isf/pricesothers/test/Tests.java
 /home/leonardo.lmartins/Documentos/projeto-final-MO409/src/test/java/org/isf/supplier/test/Tests.java
@@ -88,7 +89,6 @@
 /home/leonardo.lmartins/Documentos/projeto-final-MO409/src/test/java/org/isf/medicalstock/test/TestMovement.java
 /home/leonardo.lmartins/Documentos/projeto-final-MO409/src/test/java/org/isf/examination/test/Tests.java
 /home/leonardo.lmartins/Documentos/projeto-final-MO409/src/test/java/org/isf/vaccine/test/VaccineIoOperationsTest.java
-/home/leonardo.lmartins/Documentos/projeto-final-MO409/src/test/java/org/isf/vaccine/test/VaccineIoOperationsNewVaccineTest.java
 /home/leonardo.lmartins/Documentos/projeto-final-MO409/src/test/java/org/isf/dlvrtype/test/Tests.java
 /home/leonardo.lmartins/Documentos/projeto-final-MO409/src/test/java/org/isf/opetype/test/TestOperationType.java
 /home/leonardo.lmartins/Documentos/projeto-final-MO409/src/test/java/org/isf/admtype/test/TestAdmissionType.java

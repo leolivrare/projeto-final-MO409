@@ -152,6 +152,125 @@ public class VaccineIoOperationsFunctionalTest extends OHCoreTestCase {
         }   
     }
 
+
+    @Test
+    public void testIoUpdateVaccine() throws Exception {
+        class Params {
+            String vaccineCode;
+            String vaccineDescription;
+            String vaccineTypeCode;
+            String vaccineTypeDescription;
+            boolean vaccineAlreadyExists;
+
+            Params(String vaccineCode, String vaccineDescription, String vaccineTypeCode, String vaccineTypeDescription, boolean vaccineAlreadyExists) {
+                this.vaccineCode = vaccineCode;
+                this.vaccineDescription = vaccineDescription;
+                this.vaccineTypeCode = vaccineTypeCode;
+                this.vaccineTypeDescription = vaccineTypeDescription;
+                this.vaccineAlreadyExists = vaccineAlreadyExists;
+            }
+        }
+
+        List<Params> paramsList = Arrays.asList(
+            /* Classe Válida 1:
+            *  - vaccineCode: string com 10 caracteres
+            *  - vaccineDescription: string com 50 caracteres
+            *  - vaccineTypeCode: string com 1 caractere
+            *  - vaccineTypeDescription: string com 50 caracteres
+            *  - Vacina existe no banco de dados
+            * Resultado esperado: A função updateVaccine deve ser concluída com sucesso e o item deve ser atualizado no banco de dados */
+            new Params("1234567890", String.format("%-50s", "Description").replace(' ', 'a'), "A", String.format("%-50s", "TypeDescription").replace(' ', 'a'), true),
+
+            /* Classe Inválida 1:
+            *  - vaccineCode: string com mais de 10 caracteres
+            *  - vaccineDescription: string com 50 caracteres
+            *  - vaccineTypeCode: string com 1 caractere
+            *  - vaccineTypeDescription: string com 50 caracteres
+            *  - Vacina existe no banco de dados
+            * Resultado esperado: A função updateVaccine deve falhar, pois o vaccineCode é maior do que o permitido */
+            new Params("0000000000", String.format("%-50s", "Description").replace(' ', 'a'), "A", String.format("%-50s", "TypeDescription").replace(' ', 'a'), true),
+            
+            /* Classe Inválida 2:
+            *  - vaccineCode: string com 10 caracteres
+            *  - vaccineDescription: string com mais de 50 caracteres
+            *  - vaccineTypeCode: string com 1 caractere
+            *  - vaccineTypeDescription: string com 50 caracteres
+            *  - Vacina existe no banco de dados
+            * Resultado esperado: A função updateVaccine deve falhar, pois o vaccineDescription é maior do que o permitido */
+            new Params("1111111111", String.format("%-51s", "Description").replace(' ', 'a'), "A", String.format("%-50s", "TypeDescription").replace(' ', 'a'), true),
+
+            /* Classe Inválida 3:
+            *  - vaccineCode: string com 10 caracteres
+            *  - vaccineDescription: string com 50 caracteres
+            *  - vaccineTypeCode: string com 1 caractere
+            *  - vaccineTypeDescription: string com 50 caracteres
+            *  - Vacina não existe no banco de dados
+            * Resultado esperado: A função updateVaccine deve falhar, pois vai tentar fazer o update de um item que não existe no banco 
+            * Erro encontrado: A função updateVaccine não falha ao tentar fazer update de um item que não existe no banco. Ao invés disso,
+            * ela insere o item como se fosse novo. Isso pode gerar problema de integridade de dados, pois a função de update está funcionando
+            * também como insert.*/
+            new Params("2222222222", String.format("%-50s", "Description").replace(' ', 'a'), "A", String.format("%-50s", "TypeDescription").replace(' ', 'a'), false)
+        );
+
+        List<Throwable> exceptions = new ArrayList<>();
+
+        for (Params params : paramsList) {
+            LOGGER.info("Running test with parameters: " + params.vaccineCode + ", " + params.vaccineDescription + ", " + params.vaccineTypeCode + ", " + params.vaccineTypeDescription + ", " + params.vaccineAlreadyExists);
+            try {
+                testIoUpdateVaccineWithParams(params.vaccineCode, params.vaccineDescription, params.vaccineTypeCode, params.vaccineTypeDescription, params.vaccineAlreadyExists);
+            } catch (org.junit.ComparisonFailure e) {
+                exceptions.add(e);
+            }
+        }
+
+        if (!exceptions.isEmpty()) {
+            AssertionError ae = new AssertionError("There were errors during the tests");
+            exceptions.forEach(ae::addSuppressed);
+            throw ae;
+        }
+    }
+    
+
+    private void testIoUpdateVaccineWithParams(String vaccineCode, String vaccineDescription, String vaccineTypeCode, String vaccineTypeDescription, boolean vaccineAlreadyExists) throws Exception {
+        VaccineType vaccineType = new VaccineType();
+        vaccineType.setCode(vaccineTypeCode);
+        vaccineType.setDescription(vaccineTypeDescription);
+        vaccineTypeIoOperationRepository.saveAndFlush(vaccineType);
+
+        Vaccine vaccine = new Vaccine();
+        vaccine.setCode(vaccineCode);
+        vaccine.setDescription(vaccineDescription);
+        vaccine.setVaccineType(vaccineType);
+
+        String checkDescription = vaccineDescription;
+        if (vaccineAlreadyExists) {
+            checkDescription = "Already Exist Description";
+            vaccine.setDescription(checkDescription);
+            vaccineIoOperationRepository.saveAndFlush(vaccine);
+            vaccine.setDescription(vaccineDescription);
+        }
+        if (vaccineCode.length() > 10 || vaccineDescription.length() > 50) {
+            assertThatThrownBy(() -> {
+                vaccineIoOperation.updateVaccine(vaccine);
+            }).isInstanceOf(org.isf.utils.exception.OHDataIntegrityViolationException.class);
+        } else {
+            if (!vaccineAlreadyExists) {
+                assertThatThrownBy(() -> {
+                    vaccineIoOperation.updateVaccine(vaccine);
+                }).isInstanceOf(org.isf.utils.exception.OHException.class);
+            } else {
+                Vaccine result = vaccineIoOperation.updateVaccine(vaccine);
+                assertThat(result.getCode()).isEqualTo(vaccineCode);
+                _checkVaccineIntoDb(vaccine.getCode(), vaccineDescription);
+
+                long count = vaccineIoOperationRepository.findAll().stream()
+                    .filter(v -> v.getCode().equals(vaccineCode))
+                    .count();
+                assertThat(count).isEqualTo(1);
+            }
+        }   
+    }
+
     private void _checkVaccineIntoDb(String code, String description) throws OHException {
         Vaccine foundVaccine = vaccineIoOperation.findVaccine(code);
         LOGGER.info("Found vaccine: " + foundVaccine.getCode());

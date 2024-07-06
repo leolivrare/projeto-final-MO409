@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="org.isf.supplier.test.Tests" time="4.314" tests="14" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="org.isf.supplier.test.Tests" time="13.385" tests="14" errors="0" skipped="0" failures="0">
   <properties>
     <property name="sun.desktop" value="gnome"/>
     <property name="awt.toolkit" value="sun.awt.X11.XToolkit"/>
@@ -17,7 +17,7 @@
     <property name="user.country" value="BR"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.boot.library.path" value="/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64"/>
-    <property name="sun.java.command" value="/home/leonardo.lmartins/Documentos/projeto-final-MO409/target/surefire/surefirebooter-20240705175501336_3.jar /home/leonardo.lmartins/Documentos/projeto-final-MO409/target/surefire 2024-07-05T17-55-01_290-jvmRun1 surefire-20240705175501336_1tmp surefire_0-20240705175501336_2tmp"/>
+    <property name="sun.java.command" value="/home/leonardo.lmartins/Documentos/projeto-final-MO409/target/surefire/surefirebooter-20240706140540373_3.jar /home/leonardo.lmartins/Documentos/projeto-final-MO409/target/surefire 2024-07-06T14-05-40_271-jvmRun1 surefire-20240706140540373_1tmp surefire_0-20240706140540373_2tmp"/>
     <property name="surefire.test.class.path" value="/home/leonardo.lmartins/Documentos/projeto-final-MO409/target/test-classes:/home/leonardo.lmartins/Documentos/projeto-final-MO409/target/classes:/home/leonardo.lmartins/.m2/repository/com/drewnoakes/metadata-extractor/2.10.0/metadata-extractor-2.10.0.jar:/home/leonardo.lmartins/.m2/repository/com/adobe/xmp/xmpcore/5.1.3/xmpcore-5.1.3.jar:/home/leonardo.lmartins/.m2/repository/com/googlecode/gstreamer-java/gstreamer-java/1.4/gstreamer-java-1.4.jar:/home/leonardo.lmartins/.m2/repository/net/java/dev/jna/jna/3.2.2/jna-3.2.2.jar:/home/leonardo.lmartins/.m2/repository/org/apache/httpcomponents/httpclient/4.5.13/httpclient-4.5.13.jar:/home/leonardo.lmartins/.m2/repository/commons-logging/commons-logging/1.2/commons-logging-1.2.jar:/home/leonardo.lmartins/.m2/repository/commons-codec/commons-codec/1.11/commons-codec-1.11.jar:/home/leonardo.lmartins/.m2/repository/org/apache/httpcomponents/httpcore/4.4.14/httpcore-4.4.14.jar:/home/leonardo.lmartins/.m2/repository/net/sf/jasperreports/jasperreports/6.17.0/jasperreports-6.17.0.jar:/home/leonardo.lmartins/.m2/repository/commons-beanutils/commons-beanutils/1.9.4/commons-beanutils-1.9.4.jar:/home/leonardo.lmartins/.m2/repository/commons-collections/commons-collections/3.2.2/commons-collections-3.2.2.jar:/home/leonardo.lmartins/.m2/repository/commons-digester/commons-digester/2.1/commons-digester-2.1.jar:/home/leonardo.lmartins/.m2/repository/org/apache/commons/commons-collections4/4.2/commons-collections4-4.2.jar:/home/leonardo.lmartins/.m2/repository/org/jfree/jcommon/1.0.23/jcommon-1.0.23.jar:/home/leonardo.lmartins/.m2/repository/org/jfree/jfreechart/1.0.19/jfreechart-1.0.19.jar:/home/leonardo.lmartins/.m2/repository/org/eclipse/jdt/ecj/3.21.0/ecj-3.21.0.jar:/home/leonardo.lmartins/.m2/repository/org/codehaus/castor/castor-xml/1.4.1/castor-xml-1.4.1.jar:/home/leonardo.lmartins/.m2/repository/org/codehaus/castor/castor-core/1.4.1/castor-core-1.4.1.jar:/home/leonardo.lmartins/.m2/repository/org/apache/commons/commons-lang3/3.4/commons-lang3-3.4.jar:/home/leonardo.lmartins/.m2/repository/javax/inject/javax.inject/1/javax.inject-1.jar:/home/leonardo.lmartins/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.12.2/jackson-core-2.12.2.jar:/home/leonardo.lmartins/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.12.2/jackson-databind-2.12.2.jar:/home/leonardo.lmartins/.m2/repository/com/lowagie/itext/2.1.7/itext-2.1.7.jar:/home/leonardo.lmartins/.m2/repository/bouncycastle/bcmail-jdk14/138/bcmail-jdk14-138.jar:/home/leonardo.lmartins/.m2/repository/bouncycastle/bcprov-jdk14/138/bcprov-jdk14-138.jar:/home/leonardo.lmartins/.m2/repository/org/bouncycastle/bctsp-jdk14/1.38/bctsp-jdk14-1.38.jar:/home/leonardo.lmartins/.m2/repository/org/bouncycastle/bcprov-jdk14/1.38/bcprov-jdk14-1.38.jar:/home/leonardo.lmartins/.m2/repository/org/bouncycastle/bcmail-jdk14/1.38/bcmail-jdk14-1.38.jar:/home/leonardo.lmartins/.m2/repository/joda-time/joda-time/2.10.10/joda-time-2.10.10.jar:/home/leonardo.lmartins/.m2/repository/junit/junit/4.13.2/junit-4.13.2.jar:/home/leonardo.lmartins/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/home/leonardo.lmartins/.m2/repository/com/h2database/h2/1.4.200/h2-1.4.200.jar:/home/leonardo.lmartins/.m2/repository/com/sun/clibwrapper_jiio/1.1/clibwrapper_jiio-1.1.jar:/home/leonardo.lmartins/.m2/repository/com/sun/media/jai_imageio/1.1/jai_imageio-1.1.jar:/home/leonardo.lmartins/.m2/repository/javax/media/jai-core/1.1.3/jai-core-1.1.3.jar:/home/leonardo.lmartins/.m2/repository/mysql/mysql-connector-java/5.1.14/mysql-connector-java-5.1.14.jar:/home/leonardo.lmartins/.m2/repository/org/rxtx/rxtx/2.1.7/rxtx-2.1.7.jar:/home/leonardo.lmartins/.m2/repository/javax/xml/bind/jaxb-api/2.3.1/jaxb-api-2.3.1.jar:/home/leonardo.lmartins/.m2/repository/javax/activation/javax.activation-api/1.2.0/javax.activation-api-1.2.0.jar:/home/leonardo.lmartins/.m2/repository/com/sun/xml/bind/jaxb-core/2.3.0.1/jaxb-core-2.3.0.1.jar:/home/leonardo.lmartins/.m2/repository/com/sun/xml/bind/jaxb-impl/3.0.1/jaxb-impl-3.0.1.jar:/home/leonardo.lmartins/.m2/repository/javax/activation/activation/1.1.1/activation-1.1.1.jar:/home/leonardo.lmartins/.m2/repository/dcm4che/dcm4che-core/2.0.26/dcm4che-core-2.0.26.jar:/home/leonardo.lmartins/.m2/repository/dcm4che/dcm4che-image/2.0.26/dcm4che-image-2.0.26.jar:/home/leonardo.lmartins/.m2/repository/dcm4che/dcm4che-imageio/2.0.26/dcm4che-imageio-2.0.26.jar:/home/leonardo.lmartins/.m2/repository/org/apache/poi/poi/4.1.2/poi-4.1.2.jar:/home/leonardo.lmartins/.m2/repository/org/apache/commons/commons-math3/3.6.1/commons-math3-3.6.1.jar:/home/leonardo.lmartins/.m2/repository/com/zaxxer/SparseBitSet/1.2/SparseBitSet-1.2.jar:/home/leonardo.lmartins/.m2/repository/org/apache/poi/poi-ooxml/4.1.2/poi-ooxml-4.1.2.jar:/home/leonardo.lmartins/.m2/repository/org/apache/poi/poi-ooxml-schemas/4.1.2/poi-ooxml-schemas-4.1.2.jar:/home/leonardo.lmartins/.m2/repository/org/apache/xmlbeans/xmlbeans/3.1.0/xmlbeans-3.1.0.jar:/home/leonardo.lmartins/.m2/repository/org/apache/commons/commons-compress/1.19/commons-compress-1.19.jar:/home/leonardo.lmartins/.m2/repository/com/github/virtuald/curvesapi/1.06/curvesapi-1.06.jar:/home/leonardo.lmartins/.m2/repository/org/slf4j/slf4j-api/1.7.31/slf4j-api-1.7.31.jar:/home/leonardo.lmartins/.m2/repository/org/slf4j/slf4j-log4j12/1.7.31/slf4j-log4j12-1.7.31.jar:/home/leonardo.lmartins/.m2/repository/log4j/log4j/1.2.17/log4j-1.2.17.jar:/home/leonardo.lmartins/.m2/repository/org/igniterealtime/smack/smack/3.2.1/smack-3.2.1.jar:/home/leonardo.lmartins/.m2/repository/org/igniterealtime/smack/smackx/3.4.1/smackx-3.4.1.jar:/home/leonardo.lmartins/.m2/repository/org/hibernate/hibernate-core/4.2.13.Final/hibernate-core-4.2.13.Final.jar:/home/leonardo.lmartins/.m2/repository/antlr/antlr/2.7.7/antlr-2.7.7.jar:/home/leonardo.lmartins/.m2/repository/org/jboss/logging/jboss-logging/3.1.0.GA/jboss-logging-3.1.0.GA.jar:/home/leonardo.lmartins/.m2/repository/dom4j/dom4j/1.6.1/dom4j-1.6.1.jar:/home/leonardo.lmartins/.m2/repository/org/javassist/javassist/3.18.1-GA/javassist-3.18.1-GA.jar:/home/leonardo.lmartins/.m2/repository/org/jboss/spec/javax/transaction/jboss-transaction-api_1.1_spec/1.0.1.Final/jboss-transaction-api_1.1_spec-1.0.1.Final.jar:/home/leonardo.lmartins/.m2/repository/org/hibernate/common/hibernate-commons-annotations/4.0.2.Final/hibernate-commons-annotations-4.0.2.Final.jar:/home/leonardo.lmartins/.m2/repository/org/hibernate/javax/persistence/hibernate-jpa-2.0-api/1.0.1.Final/hibernate-jpa-2.0-api-1.0.1.Final.jar:/home/leonardo.lmartins/.m2/repository/org/hibernate/validator/hibernate-validator/6.1.6.Final/hibernate-validator-6.1.6.Final.jar:/home/leonardo.lmartins/.m2/repository/jakarta/validation/jakarta.validation-api/2.0.2/jakarta.validation-api-2.0.2.jar:/home/leonardo.lmartins/.m2/repository/com/fasterxml/classmate/1.3.4/classmate-1.3.4.jar:/home/leonardo.lmartins/.m2/repository/org/hibernate/hibernate-entitymanager/4.2.5.Final/hibernate-entitymanager-4.2.5.Final.jar:/home/leonardo.lmartins/.m2/repository/org/hibernate/hibernate-c3p0/4.2.13.Final/hibernate-c3p0-4.2.13.Final.jar:/home/leonardo.lmartins/.m2/repository/com/mchange/c3p0/0.9.2.1/c3p0-0.9.2.1.jar:/home/leonardo.lmartins/.m2/repository/com/mchange/mchange-commons-java/0.2.3.4/mchange-commons-java-0.2.3.4.jar:/home/leonardo.lmartins/.m2/repository/org/imgscalr/imgscalr-lib/4.2/imgscalr-lib-4.2.jar:/home/leonardo.lmartins/.m2/repository/org/springframework/spring-orm/4.3.28.RELEASE/spring-orm-4.3.28.RELEASE.jar:/home/leonardo.lmartins/.m2/repository/org/springframework/spring-jdbc/4.3.28.RELEASE/spring-jdbc-4.3.28.RELEASE.jar:/home/leonardo.lmartins/.m2/repository/org/springframework/spring-beans/4.3.28.RELEASE/spring-beans-4.3.28.RELEASE.jar:/home/leonardo.lmartins/.m2/repository/org/springframework/spring-context/4.3.28.RELEASE/spring-context-4.3.28.RELEASE.jar:/home/leonardo.lmartins/.m2/repository/org/springframework/spring-aop/4.3.28.RELEASE/spring-aop-4.3.28.RELEASE.jar:/home/leonardo.lmartins/.m2/repository/org/springframework/spring-expression/4.3.28.RELEASE/spring-expression-4.3.28.RELEASE.jar:/home/leonardo.lmartins/.m2/repository/org/springframework/spring-core/4.3.28.RELEASE/spring-core-4.3.28.RELEASE.jar:/home/leonardo.lmartins/.m2/repository/org/springframework/spring-test/4.3.28.RELEASE/spring-test-4.3.28.RELEASE.jar:/home/leonardo.lmartins/.m2/repository/org/springframework/spring-tx/4.3.28.RELEASE/spring-tx-4.3.28.RELEASE.jar:/home/leonardo.lmartins/.m2/repository/org/springframework/data/spring-data-jpa/1.11.23.RELEASE/spring-data-jpa-1.11.23.RELEASE.jar:/home/leonardo.lmartins/.m2/repository/org/springframework/data/spring-data-commons/1.13.23.RELEASE/spring-data-commons-1.13.23.RELEASE.jar:/home/leonardo.lmartins/.m2/repository/org/aspectj/aspectjrt/1.8.13/aspectjrt-1.8.13.jar:/home/leonardo.lmartins/.m2/repository/org/slf4j/jcl-over-slf4j/1.7.25/jcl-over-slf4j-1.7.25.jar:/home/leonardo.lmartins/.m2/repository/org/springframework/boot/spring-boot-test/1.5.22.RELEASE/spring-boot-test-1.5.22.RELEASE.jar:/home/leonardo.lmartins/.m2/repository/org/springframework/boot/spring-boot/1.5.22.RELEASE/spring-boot-1.5.22.RELEASE.jar:/home/leonardo.lmartins/.m2/repository/org/aspectj/aspectjweaver/1.9.7/aspectjweaver-1.9.7.jar:/home/leonardo.lmartins/.m2/repository/org/springframework/boot/spring-boot-starter-test/1.5.22.RELEASE/spring-boot-starter-test-1.5.22.RELEASE.jar:/home/leonardo.lmartins/.m2/repository/org/springframework/boot/spring-boot-test-autoconfigure/1.5.22.RELEASE/spring-boot-test-autoconfigure-1.5.22.RELEASE.jar:/home/leonardo.lmartins/.m2/repository/org/springframework/boot/spring-boot-autoconfigure/1.5.22.RELEASE/spring-boot-autoconfigure-1.5.22.RELEASE.jar:/home/leonardo.lmartins/.m2/repository/com/jayway/jsonpath/json-path/2.2.0/json-path-2.2.0.jar:/home/leonardo.lmartins/.m2/repository/net/minidev/json-smart/2.2.1/json-smart-2.2.1.jar:/home/leonardo.lmartins/.m2/repository/net/minidev/accessors-smart/1.1/accessors-smart-1.1.jar:/home/leonardo.lmartins/.m2/repository/org/ow2/asm/asm/5.0.3/asm-5.0.3.jar:/home/leonardo.lmartins/.m2/repository/org/mockito/mockito-core/1.10.19/mockito-core-1.10.19.jar:/home/leonardo.lmartins/.m2/repository/org/objenesis/objenesis/2.1/objenesis-2.1.jar:/home/leonardo.lmartins/.m2/repository/org/hamcrest/hamcrest-library/1.3/hamcrest-library-1.3.jar:/home/leonardo.lmartins/.m2/repository/org/skyscreamer/jsonassert/1.4.0/jsonassert-1.4.0.jar:/home/leonardo.lmartins/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar:/home/leonardo.lmartins/.m2/repository/org/springframework/spring-aspects/4.3.28.RELEASE/spring-aspects-4.3.28.RELEASE.jar:/home/leonardo.lmartins/.m2/repository/org/assertj/assertj-core/3.20.2/assertj-core-3.20.2.jar:/home/leonardo.lmartins/.m2/repository/org/springframework/cloud/spring-cloud-starter-openfeign/1.4.7.RELEASE/spring-cloud-starter-openfeign-1.4.7.RELEASE.jar:/home/leonardo.lmartins/.m2/repository/org/springframework/cloud/spring-cloud-starter/1.3.6.RELEASE/spring-cloud-starter-1.3.6.RELEASE.jar:/home/leonardo.lmartins/.m2/repository/org/springframework/boot/spring-boot-starter/1.5.21.RELEASE/spring-boot-starter-1.5.21.RELEASE.jar:/home/leonardo.lmartins/.m2/repository/org/springframework/boot/spring-boot-starter-logging/1.5.21.RELEASE/spring-boot-starter-logging-1.5.21.RELEASE.jar:/home/leonardo.lmartins/.m2/repository/org/slf4j/jul-to-slf4j/1.7.26/jul-to-slf4j-1.7.26.jar:/home/leonardo.lmartins/.m2/repository/org/yaml/snakeyaml/1.17/snakeyaml-1.17.jar:/home/leonardo.lmartins/.m2/repository/org/springframework/cloud/spring-cloud-context/1.3.6.RELEASE/spring-cloud-context-1.3.6.RELEASE.jar:/home/leonardo.lmartins/.m2/repository/org/springframework/security/spring-security-rsa/1.0.3.RELEASE/spring-security-rsa-1.0.3.RELEASE.jar:/home/leonardo.lmartins/.m2/repository/org/bouncycastle/bcpkix-jdk15on/1.55/bcpkix-jdk15on-1.55.jar:/home/leonardo.lmartins/.m2/repository/org/bouncycastle/bcprov-jdk15on/1.55/bcprov-jdk15on-1.55.jar:/home/leonardo.lmartins/.m2/repository/org/springframework/cloud/spring-cloud-netflix-core/1.4.7.RELEASE/spring-cloud-netflix-core-1.4.7.RELEASE.jar:/home/leonardo.lmartins/.m2/repository/org/springframework/spring-web/4.3.24.RELEASE/spring-web-4.3.24.RELEASE.jar:/home/leonardo.lmartins/.m2/repository/org/springframework/cloud/spring-cloud-commons/1.3.6.RELEASE/spring-cloud-commons-1.3.6.RELEASE.jar:/home/leonardo.lmartins/.m2/repository/org/springframework/security/spring-security-crypto/4.2.12.RELEASE/spring-security-crypto-4.2.12.RELEASE.jar:/home/leonardo.lmartins/.m2/repository/io/github/openfeign/feign-core/9.5.0/feign-core-9.5.0.jar:/home/leonardo.lmartins/.m2/repository/org/jvnet/animal-sniffer-annotation/1.0/animal-sniffer-annotation-1.0.jar:/home/leonardo.lmartins/.m2/repository/io/github/openfeign/feign-slf4j/9.5.0/feign-slf4j-9.5.0.jar:/home/leonardo.lmartins/.m2/repository/io/github/openfeign/feign-hystrix/9.5.0/feign-hystrix-9.5.0.jar:/home/leonardo.lmartins/.m2/repository/com/netflix/archaius/archaius-core/0.6.6/archaius-core-0.6.6.jar:/home/leonardo.lmartins/.m2/repository/com/google/code/findbugs/annotations/2.0.0/annotations-2.0.0.jar:/home/leonardo.lmartins/.m2/repository/com/netflix/hystrix/hystrix-core/1.4.26/hystrix-core-1.4.26.jar:/home/leonardo.lmartins/.m2/repository/io/reactivex/rxjava/1.1.1/rxjava-1.1.1.jar:/home/leonardo.lmartins/.m2/repository/org/springframework/cloud/spring-cloud-starter-netflix-archaius/1.4.7.RELEASE/spring-cloud-starter-netflix-archaius-1.4.7.RELEASE.jar:/home/leonardo.lmartins/.m2/repository/commons-configuration/commons-configuration/1.8/commons-configuration-1.8.jar:/home/leonardo.lmartins/.m2/repository/commons-lang/commons-lang/2.6/commons-lang-2.6.jar:/home/leonardo.lmartins/.m2/repository/com/google/guava/guava/18.0/guava-18.0.jar:/home/leonardo.lmartins/.m2/repository/io/github/openfeign/feign-gson/9.4.0/feign-gson-9.4.0.jar:/home/leonardo.lmartins/.m2/repository/com/google/code/gson/gson/2.5/gson-2.5.jar:/home/leonardo.lmartins/.m2/repository/org/springframework/spring-webmvc/4.3.28.RELEASE/spring-webmvc-4.3.28.RELEASE.jar:/home/leonardo.lmartins/.m2/repository/javax/annotation/javax.annotation-api/1.3.2/javax.annotation-api-1.3.2.jar:/home/leonardo.lmartins/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.12.3/jackson-annotations-2.12.3.jar:"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="user.home" value="/home/leonardo.lmartins"/>
@@ -30,7 +30,7 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.awt.graphicsenv" value="sun.awt.X11GraphicsEnvironment"/>
-    <property name="surefire.real.class.path" value="/home/leonardo.lmartins/Documentos/projeto-final-MO409/target/surefire/surefirebooter-20240705175501336_3.jar"/>
+    <property name="surefire.real.class.path" value="/home/leonardo.lmartins/Documentos/projeto-final-MO409/target/surefire/surefirebooter-20240706140540373_3.jar"/>
     <property name="sun.boot.class.path" value="/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/resources.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/sunrsasign.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/jsse.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/jce.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/charsets.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/jfr.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/classes"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="1.8.0_412-8u412-ga-1~22.04.1-b08"/>
@@ -59,217 +59,475 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="52.0"/>
   </properties>
-  <testcase name="testIoSupplierGetByID" classname="org.isf.supplier.test.Tests" time="0.195">
-    <system-out><![CDATA[[05/jul/2024 17:55:01] [:] INFO - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener]
-[05/jul/2024 17:55:01] [:] INFO - Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@79ad8b2f, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@1df82230, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@22635ba0, org.springframework.test.context.support.DirtiesContextTestExecutionListener@13c10b87, org.springframework.test.context.transaction.TransactionalTestExecutionListener@6a01e23, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@5a955565, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@6293abcc, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@7995092a, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@7fc2413d, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@f8c1ddd, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@70be0a2b]
-[05/jul/2024 17:55:01] [:] INFO - Loading XML bean definitions from class path resource [applicationContext.xml]
-[05/jul/2024 17:55:02] [:] INFO - Refreshing org.springframework.context.support.GenericApplicationContext@161479c6: startup date [Fri Jul 05 17:55:02 BRT 2024]; root of context hierarchy
-[05/jul/2024 17:55:02] [:] INFO - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
-[05/jul/2024 17:55:02] [:] INFO - MLog clients using log4j logging.
-[05/jul/2024 17:55:02] [:] INFO - Initializing c3p0-0.9.2.1 [built 20-March-2013 10:47:27 +0000; debug? true; trace: 10]
-[05/jul/2024 17:55:02] [:] INFO - Building JPA container EntityManagerFactory for persistence unit 'default'
-[05/jul/2024 17:55:02] [:] INFO - HCANN000001: Hibernate Commons Annotations {4.0.2.Final}
-[05/jul/2024 17:55:02] [:] INFO - HCANN000001: Hibernate Commons Annotations {4.0.2.Final}
-[05/jul/2024 17:55:02] [:] INFO - HHH000412: Hibernate Core {4.2.13.Final}
-[05/jul/2024 17:55:02] [:] INFO - HHH000412: Hibernate Core {4.2.13.Final}
-[05/jul/2024 17:55:02] [:] INFO - HHH000206: hibernate.properties not found
-[05/jul/2024 17:55:02] [:] INFO - HHH000206: hibernate.properties not found
-[05/jul/2024 17:55:02] [:] INFO - HHH000021: Bytecode provider name : javassist
-[05/jul/2024 17:55:02] [:] INFO - HHH000021: Bytecode provider name : javassist
-[05/jul/2024 17:55:02] [:] INFO - HHH000204: Processing PersistenceUnitInfo [
+  <testcase name="testIoSupplierGetByID" classname="org.isf.supplier.test.Tests" time="0.867">
+    <system-out><![CDATA[[06/jul/2024 14:05:40] [:] INFO - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener]
+[06/jul/2024 14:05:40] [:] INFO - Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@79ad8b2f, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@1df82230, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@22635ba0, org.springframework.test.context.support.DirtiesContextTestExecutionListener@13c10b87, org.springframework.test.context.transaction.TransactionalTestExecutionListener@6a01e23, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@5a955565, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@6293abcc, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@7995092a, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@7fc2413d, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@f8c1ddd, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@70be0a2b]
+[06/jul/2024 14:05:40] [:] INFO - Loading XML bean definitions from class path resource [applicationContext.xml]
+[06/jul/2024 14:05:41] [:] INFO - Refreshing org.springframework.context.support.GenericApplicationContext@161479c6: startup date [Sat Jul 06 14:05:41 BRT 2024]; root of context hierarchy
+[06/jul/2024 14:05:41] [:] INFO - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+[06/jul/2024 14:05:41] [:] INFO - MLog clients using log4j logging.
+[06/jul/2024 14:05:41] [:] INFO - Initializing c3p0-0.9.2.1 [built 20-March-2013 10:47:27 +0000; debug? true; trace: 10]
+[06/jul/2024 14:05:41] [:] INFO - Building JPA container EntityManagerFactory for persistence unit 'default'
+[06/jul/2024 14:05:41] [:] INFO - HCANN000001: Hibernate Commons Annotations {4.0.2.Final}
+[06/jul/2024 14:05:41] [:] INFO - HCANN000001: Hibernate Commons Annotations {4.0.2.Final}
+[06/jul/2024 14:05:41] [:] INFO - HHH000412: Hibernate Core {4.2.13.Final}
+[06/jul/2024 14:05:41] [:] INFO - HHH000412: Hibernate Core {4.2.13.Final}
+[06/jul/2024 14:05:41] [:] INFO - HHH000206: hibernate.properties not found
+[06/jul/2024 14:05:41] [:] INFO - HHH000206: hibernate.properties not found
+[06/jul/2024 14:05:41] [:] INFO - HHH000021: Bytecode provider name : javassist
+[06/jul/2024 14:05:41] [:] INFO - HHH000021: Bytecode provider name : javassist
+[06/jul/2024 14:05:41] [:] INFO - HHH000204: Processing PersistenceUnitInfo [
 	name: default
 	...]
-[05/jul/2024 17:55:02] [:] INFO - HHH000204: Processing PersistenceUnitInfo [
+[06/jul/2024 14:05:41] [:] INFO - HHH000204: Processing PersistenceUnitInfo [
 	name: default
 	...]
-[05/jul/2024 17:55:02] [:] INFO - HHH000130: Instantiating explicit connection provider: org.hibernate.ejb.connection.InjectedDataSourceConnectionProvider
-[05/jul/2024 17:55:02] [:] INFO - HHH000130: Instantiating explicit connection provider: org.hibernate.ejb.connection.InjectedDataSourceConnectionProvider
-[05/jul/2024 17:55:02] [:] INFO - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 1, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 5000, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> z8kfsxb410takb2yn63p1|6d171ce0, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> org.h2.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> z8kfsxb410takb2yn63p1|6d171ce0, idleConnectionTestPeriod -> 0, initialPoolSize -> 3, jdbcUrl -> jdbc:h2:mem:myDb;MODE=MySQL;IGNORECASE=TRUE;DB_CLOSE_DELAY=-1, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 300, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 10, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 0, numHelperThreads -> 3, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, statementCacheNumDeferredCloseThreads -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, userOverrides -> {}, usesTraditionalReflectiveProxies -> false ]
-[05/jul/2024 17:55:02] [:] INFO - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-[05/jul/2024 17:55:02] [:] INFO - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-[05/jul/2024 17:55:03] [:] INFO - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
-[05/jul/2024 17:55:03] [:] INFO - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
-[05/jul/2024 17:55:03] [:] INFO - HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
-[05/jul/2024 17:55:03] [:] INFO - HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
-[05/jul/2024 17:55:03] [:] INFO - HHH000397: Using ASTQueryTranslatorFactory
-[05/jul/2024 17:55:03] [:] INFO - HHH000397: Using ASTQueryTranslatorFactory
-[05/jul/2024 17:55:03] [:] INFO - HV000001: Hibernate Validator 6.1.6.Final
-[05/jul/2024 17:55:03] [:] INFO - HV000001: Hibernate Validator 6.1.6.Final
-[05/jul/2024 17:55:03] [:] INFO - HHH000228: Running hbm2ddl schema update
-[05/jul/2024 17:55:03] [:] INFO - HHH000228: Running hbm2ddl schema update
-[05/jul/2024 17:55:03] [:] INFO - HHH000102: Fetching database metadata
-[05/jul/2024 17:55:03] [:] INFO - HHH000102: Fetching database metadata
-[05/jul/2024 17:55:03] [:] INFO - HHH000396: Updating schema
-[05/jul/2024 17:55:03] [:] INFO - HHH000396: Updating schema
-[05/jul/2024 17:55:03] [:] INFO - HHH000262: Table not found: ADMISSION
-[05/jul/2024 17:55:03] [:] INFO - HHH000262: Table not found: ADMISSIONTYPE
-[05/jul/2024 17:55:03] [:] INFO - HHH000262: Table not found: AGETYPE
-[05/jul/2024 17:55:03] [:] INFO - HHH000262: Table not found: BILLITEMS
-[05/jul/2024 17:55:03] [:] INFO - HHH000262: Table not found: BILLPAYMENTS
-[05/jul/2024 17:55:03] [:] INFO - HHH000262: Table not found: BILLS
-[05/jul/2024 17:55:03] [:] INFO - HHH000262: Table not found: DELIVERYRESULTTYPE
-[05/jul/2024 17:55:03] [:] INFO - HHH000262: Table not found: DELIVERYTYPE
-[05/jul/2024 17:55:03] [:] INFO - HHH000262: Table not found: DICOM
-[05/jul/2024 17:55:03] [:] INFO - HHH000262: Table not found: DICOMTYPE
-[05/jul/2024 17:55:03] [:] INFO - HHH000262: Table not found: DISCHARGETYPE
-[05/jul/2024 17:55:03] [:] INFO - HHH000262: Table not found: DISEASE
-[05/jul/2024 17:55:03] [:] INFO - HHH000262: Table not found: DISEASETYPE
-[05/jul/2024 17:55:03] [:] INFO - HHH000262: Table not found: EXAM
-[05/jul/2024 17:55:03] [:] INFO - HHH000262: Table not found: EXAMROW
-[05/jul/2024 17:55:03] [:] INFO - HHH000262: Table not found: EXAMTYPE
-[05/jul/2024 17:55:03] [:] INFO - HHH000262: Table not found: GROUPMENU
-[05/jul/2024 17:55:03] [:] INFO - HHH000262: Table not found: HOSPITAL
-[05/jul/2024 17:55:03] [:] INFO - HHH000262: Table not found: LABORATORY
-[05/jul/2024 17:55:03] [:] INFO - HHH000262: Table not found: LABORATORYROW
-[05/jul/2024 17:55:03] [:] INFO - HHH000262: Table not found: MALNUTRITIONCONTROL
-[05/jul/2024 17:55:03] [:] INFO - HHH000262: Table not found: MEDICALDSR
-[05/jul/2024 17:55:03] [:] INFO - HHH000262: Table not found: MEDICALDSRLOT
-[05/jul/2024 17:55:03] [:] INFO - HHH000262: Table not found: MEDICALDSRSTOCKMOV
-[05/jul/2024 17:55:03] [:] INFO - HHH000262: Table not found: MEDICALDSRSTOCKMOVTYPE
-[05/jul/2024 17:55:03] [:] INFO - HHH000262: Table not found: MEDICALDSRSTOCKMOVWARD
-[05/jul/2024 17:55:03] [:] INFO - HHH000262: Table not found: MEDICALDSRTYPE
-[05/jul/2024 17:55:03] [:] INFO - HHH000262: Table not found: MEDICALDSRWARD
-[05/jul/2024 17:55:03] [:] INFO - HHH000262: Table not found: MENUITEM
-[05/jul/2024 17:55:03] [:] INFO - HHH000262: Table not found: OPD
-[05/jul/2024 17:55:03] [:] INFO - HHH000262: Table not found: OPERATION
-[05/jul/2024 17:55:03] [:] INFO - HHH000262: Table not found: OPERATIONROW
-[05/jul/2024 17:55:03] [:] INFO - HHH000262: Table not found: OPERATIONTYPE
-[05/jul/2024 17:55:03] [:] INFO - HHH000262: Table not found: PATIENT
-[05/jul/2024 17:55:03] [:] INFO - HHH000262: Table not found: PATIENTEXAMINATION
-[05/jul/2024 17:55:03] [:] INFO - HHH000262: Table not found: PATIENTVACCINE
-[05/jul/2024 17:55:03] [:] INFO - HHH000262: Table not found: PATIENT_PROFILE_PHOTO
-[05/jul/2024 17:55:03] [:] INFO - HHH000262: Table not found: PREGNANTTREATMENTTYPE
-[05/jul/2024 17:55:03] [:] INFO - HHH000262: Table not found: PRICELISTS
-[05/jul/2024 17:55:03] [:] INFO - HHH000262: Table not found: PRICES
-[05/jul/2024 17:55:03] [:] INFO - HHH000262: Table not found: PRICESOTHERS
-[05/jul/2024 17:55:03] [:] INFO - HHH000262: Table not found: SMS
-[05/jul/2024 17:55:03] [:] INFO - HHH000262: Table not found: SUPPLIER
-[05/jul/2024 17:55:03] [:] INFO - HHH000262: Table not found: THERAPIES
-[05/jul/2024 17:55:03] [:] INFO - HHH000262: Table not found: USER
-[05/jul/2024 17:55:03] [:] INFO - HHH000262: Table not found: USERGROUP
-[05/jul/2024 17:55:03] [:] INFO - HHH000262: Table not found: VACCINE
-[05/jul/2024 17:55:03] [:] INFO - HHH000262: Table not found: VACCINETYPE
-[05/jul/2024 17:55:03] [:] INFO - HHH000262: Table not found: VISITS
-[05/jul/2024 17:55:03] [:] INFO - HHH000262: Table not found: WARD
-[05/jul/2024 17:55:03] [:] INFO - HHH000262: Table not found: ADMISSION
-[05/jul/2024 17:55:03] [:] INFO - HHH000262: Table not found: ADMISSIONTYPE
-[05/jul/2024 17:55:03] [:] INFO - HHH000262: Table not found: AGETYPE
-[05/jul/2024 17:55:03] [:] INFO - HHH000262: Table not found: BILLITEMS
-[05/jul/2024 17:55:03] [:] INFO - HHH000262: Table not found: BILLPAYMENTS
-[05/jul/2024 17:55:03] [:] INFO - HHH000262: Table not found: BILLS
-[05/jul/2024 17:55:03] [:] INFO - HHH000262: Table not found: DELIVERYRESULTTYPE
-[05/jul/2024 17:55:03] [:] INFO - HHH000262: Table not found: DELIVERYTYPE
-[05/jul/2024 17:55:03] [:] INFO - HHH000262: Table not found: DICOM
-[05/jul/2024 17:55:03] [:] INFO - HHH000262: Table not found: DICOMTYPE
-[05/jul/2024 17:55:03] [:] INFO - HHH000262: Table not found: DISCHARGETYPE
-[05/jul/2024 17:55:03] [:] INFO - HHH000262: Table not found: DISEASE
-[05/jul/2024 17:55:03] [:] INFO - HHH000262: Table not found: DISEASETYPE
-[05/jul/2024 17:55:03] [:] INFO - HHH000262: Table not found: EXAM
-[05/jul/2024 17:55:03] [:] INFO - HHH000262: Table not found: EXAMROW
-[05/jul/2024 17:55:03] [:] INFO - HHH000262: Table not found: EXAMTYPE
-[05/jul/2024 17:55:03] [:] INFO - HHH000262: Table not found: GROUPMENU
-[05/jul/2024 17:55:03] [:] INFO - HHH000262: Table not found: HOSPITAL
-[05/jul/2024 17:55:03] [:] INFO - HHH000262: Table not found: LABORATORY
-[05/jul/2024 17:55:03] [:] INFO - HHH000262: Table not found: LABORATORYROW
-[05/jul/2024 17:55:03] [:] INFO - HHH000262: Table not found: MALNUTRITIONCONTROL
-[05/jul/2024 17:55:03] [:] INFO - HHH000262: Table not found: MEDICALDSR
-[05/jul/2024 17:55:03] [:] INFO - HHH000262: Table not found: MEDICALDSRLOT
-[05/jul/2024 17:55:03] [:] INFO - HHH000262: Table not found: MEDICALDSRSTOCKMOV
-[05/jul/2024 17:55:03] [:] INFO - HHH000262: Table not found: MEDICALDSRSTOCKMOVTYPE
-[05/jul/2024 17:55:03] [:] INFO - HHH000262: Table not found: MEDICALDSRSTOCKMOVWARD
-[05/jul/2024 17:55:03] [:] INFO - HHH000262: Table not found: MEDICALDSRTYPE
-[05/jul/2024 17:55:03] [:] INFO - HHH000262: Table not found: MEDICALDSRWARD
-[05/jul/2024 17:55:03] [:] INFO - HHH000262: Table not found: MENUITEM
-[05/jul/2024 17:55:03] [:] INFO - HHH000262: Table not found: OPD
-[05/jul/2024 17:55:03] [:] INFO - HHH000262: Table not found: OPERATION
-[05/jul/2024 17:55:03] [:] INFO - HHH000262: Table not found: OPERATIONROW
-[05/jul/2024 17:55:03] [:] INFO - HHH000262: Table not found: OPERATIONTYPE
-[05/jul/2024 17:55:03] [:] INFO - HHH000262: Table not found: PATIENT
-[05/jul/2024 17:55:03] [:] INFO - HHH000262: Table not found: PATIENTEXAMINATION
-[05/jul/2024 17:55:03] [:] INFO - HHH000262: Table not found: PATIENTVACCINE
-[05/jul/2024 17:55:03] [:] INFO - HHH000262: Table not found: PATIENT_PROFILE_PHOTO
-[05/jul/2024 17:55:03] [:] INFO - HHH000262: Table not found: PREGNANTTREATMENTTYPE
-[05/jul/2024 17:55:03] [:] INFO - HHH000262: Table not found: PRICELISTS
-[05/jul/2024 17:55:03] [:] INFO - HHH000262: Table not found: PRICES
-[05/jul/2024 17:55:03] [:] INFO - HHH000262: Table not found: PRICESOTHERS
-[05/jul/2024 17:55:03] [:] INFO - HHH000262: Table not found: SMS
-[05/jul/2024 17:55:03] [:] INFO - HHH000262: Table not found: SUPPLIER
-[05/jul/2024 17:55:03] [:] INFO - HHH000262: Table not found: THERAPIES
-[05/jul/2024 17:55:03] [:] INFO - HHH000262: Table not found: USER
-[05/jul/2024 17:55:03] [:] INFO - HHH000262: Table not found: USERGROUP
-[05/jul/2024 17:55:03] [:] INFO - HHH000262: Table not found: VACCINE
-[05/jul/2024 17:55:03] [:] INFO - HHH000262: Table not found: VACCINETYPE
-[05/jul/2024 17:55:03] [:] INFO - HHH000262: Table not found: VISITS
-[05/jul/2024 17:55:03] [:] INFO - HHH000262: Table not found: WARD
-[05/jul/2024 17:55:03] [:] INFO - HHH000262: Table not found: ADMISSION
-[05/jul/2024 17:55:03] [:] INFO - HHH000262: Table not found: ADMISSIONTYPE
-[05/jul/2024 17:55:03] [:] INFO - HHH000262: Table not found: AGETYPE
-[05/jul/2024 17:55:03] [:] INFO - HHH000262: Table not found: BILLITEMS
-[05/jul/2024 17:55:03] [:] INFO - HHH000262: Table not found: BILLPAYMENTS
-[05/jul/2024 17:55:03] [:] INFO - HHH000262: Table not found: BILLS
-[05/jul/2024 17:55:03] [:] INFO - HHH000262: Table not found: DELIVERYRESULTTYPE
-[05/jul/2024 17:55:03] [:] INFO - HHH000262: Table not found: DELIVERYTYPE
-[05/jul/2024 17:55:03] [:] INFO - HHH000262: Table not found: DICOM
-[05/jul/2024 17:55:03] [:] INFO - HHH000262: Table not found: DICOMTYPE
-[05/jul/2024 17:55:03] [:] INFO - HHH000262: Table not found: DISCHARGETYPE
-[05/jul/2024 17:55:03] [:] INFO - HHH000262: Table not found: DISEASE
-[05/jul/2024 17:55:03] [:] INFO - HHH000262: Table not found: DISEASETYPE
-[05/jul/2024 17:55:03] [:] INFO - HHH000262: Table not found: EXAM
-[05/jul/2024 17:55:03] [:] INFO - HHH000262: Table not found: EXAMROW
-[05/jul/2024 17:55:03] [:] INFO - HHH000262: Table not found: EXAMTYPE
-[05/jul/2024 17:55:03] [:] INFO - HHH000262: Table not found: GROUPMENU
-[05/jul/2024 17:55:03] [:] INFO - HHH000262: Table not found: HOSPITAL
-[05/jul/2024 17:55:03] [:] INFO - HHH000262: Table not found: LABORATORY
-[05/jul/2024 17:55:03] [:] INFO - HHH000262: Table not found: LABORATORYROW
-[05/jul/2024 17:55:03] [:] INFO - HHH000262: Table not found: MALNUTRITIONCONTROL
-[05/jul/2024 17:55:03] [:] INFO - HHH000262: Table not found: MEDICALDSR
-[05/jul/2024 17:55:03] [:] INFO - HHH000262: Table not found: MEDICALDSRLOT
-[05/jul/2024 17:55:03] [:] INFO - HHH000262: Table not found: MEDICALDSRSTOCKMOV
-[05/jul/2024 17:55:03] [:] INFO - HHH000262: Table not found: MEDICALDSRSTOCKMOVTYPE
-[05/jul/2024 17:55:03] [:] INFO - HHH000262: Table not found: MEDICALDSRSTOCKMOVWARD
-[05/jul/2024 17:55:03] [:] INFO - HHH000262: Table not found: MEDICALDSRTYPE
-[05/jul/2024 17:55:03] [:] INFO - HHH000262: Table not found: MEDICALDSRWARD
-[05/jul/2024 17:55:03] [:] INFO - HHH000262: Table not found: MENUITEM
-[05/jul/2024 17:55:03] [:] INFO - HHH000262: Table not found: OPD
-[05/jul/2024 17:55:03] [:] INFO - HHH000262: Table not found: OPERATION
-[05/jul/2024 17:55:03] [:] INFO - HHH000262: Table not found: OPERATIONROW
-[05/jul/2024 17:55:03] [:] INFO - HHH000262: Table not found: OPERATIONTYPE
-[05/jul/2024 17:55:03] [:] INFO - HHH000262: Table not found: PATIENT
-[05/jul/2024 17:55:03] [:] INFO - HHH000262: Table not found: PATIENTEXAMINATION
-[05/jul/2024 17:55:03] [:] INFO - HHH000262: Table not found: PATIENTVACCINE
-[05/jul/2024 17:55:03] [:] INFO - HHH000262: Table not found: PATIENT_PROFILE_PHOTO
-[05/jul/2024 17:55:03] [:] INFO - HHH000262: Table not found: PREGNANTTREATMENTTYPE
-[05/jul/2024 17:55:03] [:] INFO - HHH000262: Table not found: PRICELISTS
-[05/jul/2024 17:55:03] [:] INFO - HHH000262: Table not found: PRICES
-[05/jul/2024 17:55:03] [:] INFO - HHH000262: Table not found: PRICESOTHERS
-[05/jul/2024 17:55:03] [:] INFO - HHH000262: Table not found: SMS
-[05/jul/2024 17:55:03] [:] INFO - HHH000262: Table not found: SUPPLIER
-[05/jul/2024 17:55:03] [:] INFO - HHH000262: Table not found: THERAPIES
-[05/jul/2024 17:55:03] [:] INFO - HHH000262: Table not found: USER
-[05/jul/2024 17:55:03] [:] INFO - HHH000262: Table not found: USERGROUP
-[05/jul/2024 17:55:03] [:] INFO - HHH000262: Table not found: VACCINE
-[05/jul/2024 17:55:03] [:] INFO - HHH000262: Table not found: VACCINETYPE
-[05/jul/2024 17:55:03] [:] INFO - HHH000262: Table not found: VISITS
-[05/jul/2024 17:55:03] [:] INFO - HHH000262: Table not found: WARD
-[05/jul/2024 17:55:03] [:] INFO - HHH000232: Schema update complete
-[05/jul/2024 17:55:03] [:] INFO - HHH000232: Schema update complete
-[05/jul/2024 17:55:03] [:] INFO - Initialized JPA EntityManagerFactory for persistence unit 'default'
-[05/jul/2024 17:55:05] [:] INFO - SMS Sender GSM started...
-[05/jul/2024 17:55:05] [:] INFO - File sms.properties loaded.
-[05/jul/2024 17:55:05] [:] INFO - File examination.properties loaded.
+[06/jul/2024 14:05:41] [:] INFO - HHH000130: Instantiating explicit connection provider: org.hibernate.ejb.connection.InjectedDataSourceConnectionProvider
+[06/jul/2024 14:05:41] [:] INFO - HHH000130: Instantiating explicit connection provider: org.hibernate.ejb.connection.InjectedDataSourceConnectionProvider
+[06/jul/2024 14:05:41] [:] INFO - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 1, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 5000, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> z8kfsxb4120jh1qho7l2m|2f5c1332, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> z8kfsxb4120jh1qho7l2m|2f5c1332, idleConnectionTestPeriod -> 0, initialPoolSize -> 3, jdbcUrl -> jdbc:mysql://localhost:3306/oh?useSSL=false&serverTimezone=UTC, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 300, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 10, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 0, numHelperThreads -> 3, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, statementCacheNumDeferredCloseThreads -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, userOverrides -> {}, usesTraditionalReflectiveProxies -> false ]
+[06/jul/2024 14:05:42] [:] INFO - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+[06/jul/2024 14:05:42] [:] INFO - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+[06/jul/2024 14:05:42] [:] INFO - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+[06/jul/2024 14:05:42] [:] INFO - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+[06/jul/2024 14:05:42] [:] INFO - HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+[06/jul/2024 14:05:42] [:] INFO - HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+[06/jul/2024 14:05:42] [:] INFO - HHH000397: Using ASTQueryTranslatorFactory
+[06/jul/2024 14:05:42] [:] INFO - HHH000397: Using ASTQueryTranslatorFactory
+[06/jul/2024 14:05:42] [:] INFO - HV000001: Hibernate Validator 6.1.6.Final
+[06/jul/2024 14:05:42] [:] INFO - HV000001: Hibernate Validator 6.1.6.Final
+[06/jul/2024 14:05:42] [:] INFO - HHH000228: Running hbm2ddl schema update
+[06/jul/2024 14:05:42] [:] INFO - HHH000228: Running hbm2ddl schema update
+[06/jul/2024 14:05:42] [:] INFO - HHH000102: Fetching database metadata
+[06/jul/2024 14:05:42] [:] INFO - HHH000102: Fetching database metadata
+[06/jul/2024 14:05:42] [:] INFO - HHH000396: Updating schema
+[06/jul/2024 14:05:42] [:] INFO - HHH000396: Updating schema
+[06/jul/2024 14:05:42] [:] INFO - HHH000261: Table found: oh.admission
+[06/jul/2024 14:05:42] [:] INFO - HHH000261: Table found: oh.admission
+[06/jul/2024 14:05:42] [:] INFO - HHH000037: Columns: [adm_prg_dlt_id_a, adm_prg_date_ctrl1, adm_out_dis_id_a_2, adm_prg_date_ctrl2, adm_prg_ptt_id_a, adm_note, adm_trans, adm_out_dis_id_a_3, adm_lock, adm_last_modified_by, adm_resop, adm_prg_date_abort, adm_fhu, adm_in_dis_id_a, adm_wrd_id_a, adm_yprog, adm_out_dis_id_a, adm_ope_id_a, adm_type, adm_date_dis, adm_created_by, adm_in, adm_date_adm, adm_prg_drt_id_a, adm_prg_date_del, adm_pat_id, adm_usr_id_a, adm_prg_weight, adm_id, adm_dist_id_a, adm_date_op, adm_last_modified_date, adm_deleted, adm_prg_date_vis, adm_active, adm_admt_id_a_adm, adm_created_date]
+[06/jul/2024 14:05:42] [:] INFO - HHH000037: Columns: [adm_prg_dlt_id_a, adm_prg_date_ctrl1, adm_out_dis_id_a_2, adm_prg_date_ctrl2, adm_prg_ptt_id_a, adm_note, adm_trans, adm_out_dis_id_a_3, adm_lock, adm_last_modified_by, adm_resop, adm_prg_date_abort, adm_fhu, adm_in_dis_id_a, adm_wrd_id_a, adm_yprog, adm_out_dis_id_a, adm_ope_id_a, adm_type, adm_date_dis, adm_created_by, adm_in, adm_date_adm, adm_prg_drt_id_a, adm_prg_date_del, adm_pat_id, adm_usr_id_a, adm_prg_weight, adm_id, adm_dist_id_a, adm_date_op, adm_last_modified_date, adm_deleted, adm_prg_date_vis, adm_active, adm_admt_id_a_adm, adm_created_date]
+[06/jul/2024 14:05:42] [:] INFO - HHH000108: Foreign keys: [fk_admission_admissiontype, fk_admission_ward, fk_admission_out_disease1, fk_admission_out_disease2, fk_admission_dischargetype, fk_admission_operation, fk_admission_deliverytype, fk_admission_out_disease3, fk_admission_deliveryresulttype, fk_admission_in_disease, fk_admission_patient, fk_admission_pregnanttreatmenttype]
+[06/jul/2024 14:05:42] [:] INFO - HHH000108: Foreign keys: [fk_admission_admissiontype, fk_admission_ward, fk_admission_out_disease1, fk_admission_out_disease2, fk_admission_dischargetype, fk_admission_operation, fk_admission_deliverytype, fk_admission_out_disease3, fk_admission_deliveryresulttype, fk_admission_in_disease, fk_admission_patient, fk_admission_pregnanttreatmenttype]
+[06/jul/2024 14:05:42] [:] INFO - HHH000126: Indexes: [fk_admission_ward, fk_admission_out_disease1, fk_admission_out_disease2, fk_admission_deliverytype, fk_admission_out_disease3, fk_admission_deliveryresulttype, fk_admission_in_disease, fk_admission_admissiontype, fk_admission_dischargetype, fk_admission_operation, primary, fk_admission_pregnanttreatmenttype, fk_admission_patient]
+[06/jul/2024 14:05:42] [:] INFO - HHH000126: Indexes: [fk_admission_ward, fk_admission_out_disease1, fk_admission_out_disease2, fk_admission_deliverytype, fk_admission_out_disease3, fk_admission_deliveryresulttype, fk_admission_in_disease, fk_admission_admissiontype, fk_admission_dischargetype, fk_admission_operation, primary, fk_admission_pregnanttreatmenttype, fk_admission_patient]
+[06/jul/2024 14:05:42] [:] INFO - HHH000261: Table found: oh.admissiontype
+[06/jul/2024 14:05:42] [:] INFO - HHH000261: Table found: oh.admissiontype
+[06/jul/2024 14:05:42] [:] INFO - HHH000037: Columns: [admt_desc, admt_last_modified_by, admt_created_by, admt_active, admt_id_a, admt_last_modified_date, admt_created_date]
+[06/jul/2024 14:05:42] [:] INFO - HHH000037: Columns: [admt_desc, admt_last_modified_by, admt_created_by, admt_active, admt_id_a, admt_last_modified_date, admt_created_date]
+[06/jul/2024 14:05:42] [:] INFO - HHH000108: Foreign keys: []
+[06/jul/2024 14:05:42] [:] INFO - HHH000108: Foreign keys: []
+[06/jul/2024 14:05:42] [:] INFO - HHH000126: Indexes: [primary]
+[06/jul/2024 14:05:42] [:] INFO - HHH000126: Indexes: [primary]
+[06/jul/2024 14:05:42] [:] INFO - HHH000261: Table found: oh.agetype
+[06/jul/2024 14:05:42] [:] INFO - HHH000261: Table found: oh.agetype
+[06/jul/2024 14:05:42] [:] INFO - HHH000037: Columns: [at_code, at_created_date, at_last_modified_date, at_last_modified_by, at_desc, at_active, at_to, at_created_by, at_from]
+[06/jul/2024 14:05:42] [:] INFO - HHH000037: Columns: [at_code, at_created_date, at_last_modified_date, at_last_modified_by, at_desc, at_active, at_to, at_created_by, at_from]
+[06/jul/2024 14:05:42] [:] INFO - HHH000108: Foreign keys: []
+[06/jul/2024 14:05:42] [:] INFO - HHH000108: Foreign keys: []
+[06/jul/2024 14:05:42] [:] INFO - HHH000126: Indexes: [primary]
+[06/jul/2024 14:05:42] [:] INFO - HHH000126: Indexes: [primary]
+[06/jul/2024 14:05:42] [:] INFO - HHH000261: Table found: oh.billitems
+[06/jul/2024 14:05:42] [:] INFO - HHH000261: Table found: oh.billitems
+[06/jul/2024 14:05:42] [:] INFO - HHH000037: Columns: [bli_is_price, bli_active, bli_id_price, bli_created_by, bli_qty, bli_id, bli_last_modified_by, bli_created_date, bli_item_desc, bli_item_amount, bli_last_modified_date, bli_id_bill]
+[06/jul/2024 14:05:42] [:] INFO - HHH000037: Columns: [bli_is_price, bli_active, bli_id_price, bli_created_by, bli_qty, bli_id, bli_last_modified_by, bli_created_date, bli_item_desc, bli_item_amount, bli_last_modified_date, bli_id_bill]
+[06/jul/2024 14:05:42] [:] INFO - HHH000108: Foreign keys: [fk_billitems_bills]
+[06/jul/2024 14:05:42] [:] INFO - HHH000108: Foreign keys: [fk_billitems_bills]
+[06/jul/2024 14:05:42] [:] INFO - HHH000126: Indexes: [primary, fk_billitems_bills]
+[06/jul/2024 14:05:42] [:] INFO - HHH000126: Indexes: [primary, fk_billitems_bills]
+[06/jul/2024 14:05:42] [:] INFO - HHH000261: Table found: oh.billpayments
+[06/jul/2024 14:05:42] [:] INFO - HHH000261: Table found: oh.billpayments
+[06/jul/2024 14:05:42] [:] INFO - HHH000037: Columns: [blp_active, blp_created_date, blp_id, blp_id_bill, blp_last_modified_date, blp_date, blp_amount, blp_usr_id_a, blp_last_modified_by, blp_created_by]
+[06/jul/2024 14:05:42] [:] INFO - HHH000037: Columns: [blp_active, blp_created_date, blp_id, blp_id_bill, blp_last_modified_date, blp_date, blp_amount, blp_usr_id_a, blp_last_modified_by, blp_created_by]
+[06/jul/2024 14:05:42] [:] INFO - HHH000108: Foreign keys: [fk_billpayments_bills]
+[06/jul/2024 14:05:42] [:] INFO - HHH000108: Foreign keys: [fk_billpayments_bills]
+[06/jul/2024 14:05:42] [:] INFO - HHH000126: Indexes: [fk_billpayments_bills, primary]
+[06/jul/2024 14:05:42] [:] INFO - HHH000126: Indexes: [fk_billpayments_bills, primary]
+[06/jul/2024 14:05:42] [:] INFO - HHH000261: Table found: oh.bills
+[06/jul/2024 14:05:42] [:] INFO - HHH000261: Table found: oh.bills
+[06/jul/2024 14:05:42] [:] INFO - HHH000037: Columns: [bll_balance, bll_date, bll_id_lst, bll_id, bll_created_by, bll_is_lst, bll_update, bll_usr_id_a, bll_amount, bll_is_pat, bll_lst_name, bll_last_modified_date, bll_created_date, bll_status, bll_last_modified_by, bll_id_pat, bll_active, bll_pat_name]
+[06/jul/2024 14:05:42] [:] INFO - HHH000037: Columns: [bll_balance, bll_date, bll_id_lst, bll_id, bll_created_by, bll_is_lst, bll_update, bll_usr_id_a, bll_amount, bll_is_pat, bll_lst_name, bll_last_modified_date, bll_created_date, bll_status, bll_last_modified_by, bll_id_pat, bll_active, bll_pat_name]
+[06/jul/2024 14:05:42] [:] INFO - HHH000108: Foreign keys: [fk_bills_pricelists, fk_bills_patient]
+[06/jul/2024 14:05:42] [:] INFO - HHH000108: Foreign keys: [fk_bills_pricelists, fk_bills_patient]
+[06/jul/2024 14:05:42] [:] INFO - HHH000126: Indexes: [fk_bills_pricelists, fk_bills_patient, primary]
+[06/jul/2024 14:05:42] [:] INFO - HHH000126: Indexes: [fk_bills_pricelists, fk_bills_patient, primary]
+[06/jul/2024 14:05:42] [:] INFO - HHH000261: Table found: oh.deliveryresulttype
+[06/jul/2024 14:05:42] [:] INFO - HHH000261: Table found: oh.deliveryresulttype
+[06/jul/2024 14:05:42] [:] INFO - HHH000037: Columns: [drt_created_date, drt_last_modified_by, drt_created_by, drt_id_a, drt_desc, drt_active, drt_last_modified_date]
+[06/jul/2024 14:05:42] [:] INFO - HHH000037: Columns: [drt_created_date, drt_last_modified_by, drt_created_by, drt_id_a, drt_desc, drt_active, drt_last_modified_date]
+[06/jul/2024 14:05:42] [:] INFO - HHH000108: Foreign keys: []
+[06/jul/2024 14:05:42] [:] INFO - HHH000108: Foreign keys: []
+[06/jul/2024 14:05:42] [:] INFO - HHH000126: Indexes: [primary]
+[06/jul/2024 14:05:42] [:] INFO - HHH000126: Indexes: [primary]
+[06/jul/2024 14:05:42] [:] INFO - HHH000261: Table found: oh.deliverytype
+[06/jul/2024 14:05:42] [:] INFO - HHH000261: Table found: oh.deliverytype
+[06/jul/2024 14:05:42] [:] INFO - HHH000037: Columns: [dlt_created_date, dlt_id_a, dlt_desc, dlt_last_modified_date, dlt_created_by, dlt_last_modified_by, dlt_active]
+[06/jul/2024 14:05:42] [:] INFO - HHH000037: Columns: [dlt_created_date, dlt_id_a, dlt_desc, dlt_last_modified_date, dlt_created_by, dlt_last_modified_by, dlt_active]
+[06/jul/2024 14:05:42] [:] INFO - HHH000108: Foreign keys: []
+[06/jul/2024 14:05:42] [:] INFO - HHH000108: Foreign keys: []
+[06/jul/2024 14:05:42] [:] INFO - HHH000126: Indexes: [primary]
+[06/jul/2024 14:05:42] [:] INFO - HHH000126: Indexes: [primary]
+[06/jul/2024 14:05:42] [:] INFO - HHH000261: Table found: oh.dicom
+[06/jul/2024 14:05:42] [:] INFO - HHH000261: Table found: oh.dicom
+[06/jul/2024 14:05:42] [:] INFO - HHH000037: Columns: [dm_file_pat_addr, dm_active, dm_file_nome, dm_file_pat_sex, dm_file_pat_birthdate, dm_file_modaliity, dm_file_st_date, dm_file_ser_inst_uid, dm_file_pat_uid, dm_file_pat_name, dm_file_ser_date, dm_file_st_uid, dm_created_by, dm_pat_id, dm_last_modified_by, dm_thumbnail, dm_file_id, dm_file_pat_age, dm_last_modified_date, dm_dcmt_id, dm_file_ser_number, dm_file_accession_number, dm_file_ser_desc, dm_file_inst_uid, dm_file_ser_desc_cod_seq, dm_file_st_descr, dm_data, dm_file_ser_uid, dm_file_institution_name, dm_created_date]
+[06/jul/2024 14:05:42] [:] INFO - HHH000037: Columns: [dm_file_pat_addr, dm_active, dm_file_nome, dm_file_pat_sex, dm_file_pat_birthdate, dm_file_modaliity, dm_file_st_date, dm_file_ser_inst_uid, dm_file_pat_uid, dm_file_pat_name, dm_file_ser_date, dm_file_st_uid, dm_created_by, dm_pat_id, dm_last_modified_by, dm_thumbnail, dm_file_id, dm_file_pat_age, dm_last_modified_date, dm_dcmt_id, dm_file_ser_number, dm_file_accession_number, dm_file_ser_desc, dm_file_inst_uid, dm_file_ser_desc_cod_seq, dm_file_st_descr, dm_data, dm_file_ser_uid, dm_file_institution_name, dm_created_date]
+[06/jul/2024 14:05:42] [:] INFO - HHH000108: Foreign keys: [fk_dicom_dicomtype]
+[06/jul/2024 14:05:42] [:] INFO - HHH000108: Foreign keys: [fk_dicom_dicomtype]
+[06/jul/2024 14:05:42] [:] INFO - HHH000126: Indexes: [fk_dicom_dicomtype_idx, primary]
+[06/jul/2024 14:05:42] [:] INFO - HHH000126: Indexes: [fk_dicom_dicomtype_idx, primary]
+[06/jul/2024 14:05:42] [:] INFO - HHH000261: Table found: oh.dicomtype
+[06/jul/2024 14:05:42] [:] INFO - HHH000261: Table found: oh.dicomtype
+[06/jul/2024 14:05:42] [:] INFO - HHH000037: Columns: [dcmt_id, dcmt_desc]
+[06/jul/2024 14:05:42] [:] INFO - HHH000037: Columns: [dcmt_id, dcmt_desc]
+[06/jul/2024 14:05:42] [:] INFO - HHH000108: Foreign keys: []
+[06/jul/2024 14:05:42] [:] INFO - HHH000108: Foreign keys: []
+[06/jul/2024 14:05:42] [:] INFO - HHH000126: Indexes: [primary]
+[06/jul/2024 14:05:42] [:] INFO - HHH000126: Indexes: [primary]
+[06/jul/2024 14:05:42] [:] INFO - HHH000261: Table found: oh.dischargetype
+[06/jul/2024 14:05:42] [:] INFO - HHH000261: Table found: oh.dischargetype
+[06/jul/2024 14:05:42] [:] INFO - HHH000037: Columns: [dist_last_modified_by, dist_created_date, dist_desc, dist_last_modified_date, dist_active, dist_id_a, dist_created_by]
+[06/jul/2024 14:05:42] [:] INFO - HHH000037: Columns: [dist_last_modified_by, dist_created_date, dist_desc, dist_last_modified_date, dist_active, dist_id_a, dist_created_by]
+[06/jul/2024 14:05:42] [:] INFO - HHH000108: Foreign keys: []
+[06/jul/2024 14:05:42] [:] INFO - HHH000108: Foreign keys: []
+[06/jul/2024 14:05:42] [:] INFO - HHH000126: Indexes: [primary]
+[06/jul/2024 14:05:42] [:] INFO - HHH000126: Indexes: [primary]
+[06/jul/2024 14:05:42] [:] INFO - HHH000261: Table found: oh.disease
+[06/jul/2024 14:05:42] [:] INFO - HHH000261: Table found: oh.disease
+[06/jul/2024 14:05:42] [:] INFO - HHH000037: Columns: [dis_created_by, dis_lock, dis_id_a, dis_last_modified_date, dis_desc, dis_ipd_in_include, dis_dcl_id_a, dis_created_date, dis_last_modified_by, dis_opd_include, dis_ipd_out_include, dis_active]
+[06/jul/2024 14:05:42] [:] INFO - HHH000037: Columns: [dis_created_by, dis_lock, dis_id_a, dis_last_modified_date, dis_desc, dis_ipd_in_include, dis_dcl_id_a, dis_created_date, dis_last_modified_by, dis_opd_include, dis_ipd_out_include, dis_active]
+[06/jul/2024 14:05:42] [:] INFO - HHH000108: Foreign keys: [fk_disease_diseasetype]
+[06/jul/2024 14:05:42] [:] INFO - HHH000108: Foreign keys: [fk_disease_diseasetype]
+[06/jul/2024 14:05:42] [:] INFO - HHH000126: Indexes: [fk_disease_diseasetype, primary]
+[06/jul/2024 14:05:42] [:] INFO - HHH000126: Indexes: [fk_disease_diseasetype, primary]
+[06/jul/2024 14:05:42] [:] INFO - HHH000261: Table found: oh.diseasetype
+[06/jul/2024 14:05:42] [:] INFO - HHH000261: Table found: oh.diseasetype
+[06/jul/2024 14:05:42] [:] INFO - HHH000037: Columns: [dcl_desc, dcl_created_by, dcl_created_date, dcl_last_modified_by, dcl_id_a, dcl_last_modified_date, dcl_active]
+[06/jul/2024 14:05:42] [:] INFO - HHH000037: Columns: [dcl_desc, dcl_created_by, dcl_created_date, dcl_last_modified_by, dcl_id_a, dcl_last_modified_date, dcl_active]
+[06/jul/2024 14:05:42] [:] INFO - HHH000108: Foreign keys: []
+[06/jul/2024 14:05:42] [:] INFO - HHH000108: Foreign keys: []
+[06/jul/2024 14:05:42] [:] INFO - HHH000126: Indexes: [primary]
+[06/jul/2024 14:05:42] [:] INFO - HHH000126: Indexes: [primary]
+[06/jul/2024 14:05:42] [:] INFO - HHH000261: Table found: oh.exam
+[06/jul/2024 14:05:42] [:] INFO - HHH000261: Table found: oh.exam
+[06/jul/2024 14:05:42] [:] INFO - HHH000037: Columns: [exa_desc, exa_proc, exa_created_by, exa_last_modified_by, exa_last_modified_date, exa_active, exa_default, exa_id_a, exa_lock, exa_created_date, exa_exc_id_a]
+[06/jul/2024 14:05:42] [:] INFO - HHH000037: Columns: [exa_desc, exa_proc, exa_created_by, exa_last_modified_by, exa_last_modified_date, exa_active, exa_default, exa_id_a, exa_lock, exa_created_date, exa_exc_id_a]
+[06/jul/2024 14:05:42] [:] INFO - HHH000108: Foreign keys: [fk_exam_examtype]
+[06/jul/2024 14:05:42] [:] INFO - HHH000108: Foreign keys: [fk_exam_examtype]
+[06/jul/2024 14:05:42] [:] INFO - HHH000126: Indexes: [fk_exam_examtype, primary]
+[06/jul/2024 14:05:42] [:] INFO - HHH000126: Indexes: [fk_exam_examtype, primary]
+[06/jul/2024 14:05:42] [:] INFO - HHH000261: Table found: oh.examrow
+[06/jul/2024 14:05:42] [:] INFO - HHH000261: Table found: oh.examrow
+[06/jul/2024 14:05:42] [:] INFO - HHH000037: Columns: [exr_id, exr_created_date, exr_last_modified_by, exr_desc, exr_active, exr_exa_id_a, exr_created_by, exr_last_modified_date]
+[06/jul/2024 14:05:42] [:] INFO - HHH000037: Columns: [exr_id, exr_created_date, exr_last_modified_by, exr_desc, exr_active, exr_exa_id_a, exr_created_by, exr_last_modified_date]
+[06/jul/2024 14:05:42] [:] INFO - HHH000108: Foreign keys: [fk_examrow_exam]
+[06/jul/2024 14:05:42] [:] INFO - HHH000108: Foreign keys: [fk_examrow_exam]
+[06/jul/2024 14:05:42] [:] INFO - HHH000126: Indexes: [fk_examrow_exam, primary]
+[06/jul/2024 14:05:42] [:] INFO - HHH000126: Indexes: [fk_examrow_exam, primary]
+[06/jul/2024 14:05:42] [:] INFO - HHH000261: Table found: oh.examtype
+[06/jul/2024 14:05:42] [:] INFO - HHH000261: Table found: oh.examtype
+[06/jul/2024 14:05:42] [:] INFO - HHH000037: Columns: [exc_id_a, exc_last_modified_date, exc_active, exc_last_modified_by, exc_desc, exc_created_date, exc_created_by]
+[06/jul/2024 14:05:42] [:] INFO - HHH000037: Columns: [exc_id_a, exc_last_modified_date, exc_active, exc_last_modified_by, exc_desc, exc_created_date, exc_created_by]
+[06/jul/2024 14:05:42] [:] INFO - HHH000108: Foreign keys: []
+[06/jul/2024 14:05:42] [:] INFO - HHH000108: Foreign keys: []
+[06/jul/2024 14:05:42] [:] INFO - HHH000126: Indexes: [primary]
+[06/jul/2024 14:05:42] [:] INFO - HHH000126: Indexes: [primary]
+[06/jul/2024 14:05:42] [:] INFO - HHH000261: Table found: oh.groupmenu
+[06/jul/2024 14:05:42] [:] INFO - HHH000261: Table found: oh.groupmenu
+[06/jul/2024 14:05:42] [:] INFO - HHH000037: Columns: [gm_ug_id_a, gm_active, gm_mni_id_a, gm_id, gm_created_by, gm_created_date, gm_last_modified_date, gm_last_modified_by]
+[06/jul/2024 14:05:42] [:] INFO - HHH000037: Columns: [gm_ug_id_a, gm_active, gm_mni_id_a, gm_id, gm_created_by, gm_created_date, gm_last_modified_date, gm_last_modified_by]
+[06/jul/2024 14:05:42] [:] INFO - HHH000108: Foreign keys: []
+[06/jul/2024 14:05:42] [:] INFO - HHH000108: Foreign keys: []
+[06/jul/2024 14:05:42] [:] INFO - HHH000126: Indexes: [primary]
+[06/jul/2024 14:05:42] [:] INFO - HHH000126: Indexes: [primary]
+[06/jul/2024 14:05:42] [:] INFO - HHH000261: Table found: oh.hospital
+[06/jul/2024 14:05:42] [:] INFO - HHH000261: Table found: oh.hospital
+[06/jul/2024 14:05:42] [:] INFO - HHH000037: Columns: [hos_tele, hos_lock, hos_id_a, hos_name, hos_city, hos_last_modified_date, hos_active, hos_email, hos_addr, hos_last_modified_by, hos_created_by, hos_fax, hos_created_date, hos_curr_cod]
+[06/jul/2024 14:05:42] [:] INFO - HHH000037: Columns: [hos_tele, hos_lock, hos_id_a, hos_name, hos_city, hos_last_modified_date, hos_active, hos_email, hos_addr, hos_last_modified_by, hos_created_by, hos_fax, hos_created_date, hos_curr_cod]
+[06/jul/2024 14:05:42] [:] INFO - HHH000108: Foreign keys: []
+[06/jul/2024 14:05:42] [:] INFO - HHH000108: Foreign keys: []
+[06/jul/2024 14:05:42] [:] INFO - HHH000126: Indexes: [primary]
+[06/jul/2024 14:05:42] [:] INFO - HHH000126: Indexes: [primary]
+[06/jul/2024 14:05:42] [:] INFO - HHH000261: Table found: oh.laboratory
+[06/jul/2024 14:05:42] [:] INFO - HHH000261: Table found: oh.laboratory
+[06/jul/2024 14:05:42] [:] INFO - HHH000037: Columns: [lab_note, lab_cross13, lab_active, lab_created_date, lab_exam_date, lab_sex, lab_exa_id_a, lab_cross5, lab_last_modified_by, lab_pat_id, lab_cross4, lab_cross3, lab_cross2, lab_cross1, lab_res, lab_cross10, lab_cross11, lab_cross12, lab_cross9, lab_id, lab_cross8, lab_cross7, lab_cross6, lab_pat_name, lab_pat_inout, lab_last_modified_date, lab_age, lab_material, lab_created_by, lab_lock, lab_date]
+[06/jul/2024 14:05:42] [:] INFO - HHH000037: Columns: [lab_note, lab_cross13, lab_active, lab_created_date, lab_exam_date, lab_sex, lab_exa_id_a, lab_cross5, lab_last_modified_by, lab_pat_id, lab_cross4, lab_cross3, lab_cross2, lab_cross1, lab_res, lab_cross10, lab_cross11, lab_cross12, lab_cross9, lab_id, lab_cross8, lab_cross7, lab_cross6, lab_pat_name, lab_pat_inout, lab_last_modified_date, lab_age, lab_material, lab_created_by, lab_lock, lab_date]
+[06/jul/2024 14:05:42] [:] INFO - HHH000108: Foreign keys: [fk_laboratory_patient, fk_laboratory_exam]
+[06/jul/2024 14:05:42] [:] INFO - HHH000108: Foreign keys: [fk_laboratory_patient, fk_laboratory_exam]
+[06/jul/2024 14:05:42] [:] INFO - HHH000126: Indexes: [fk_laboratory_patient, fk_laboratory_exam, primary]
+[06/jul/2024 14:05:42] [:] INFO - HHH000126: Indexes: [fk_laboratory_patient, fk_laboratory_exam, primary]
+[06/jul/2024 14:05:42] [:] INFO - HHH000261: Table found: oh.laboratoryrow
+[06/jul/2024 14:05:42] [:] INFO - HHH000261: Table found: oh.laboratoryrow
+[06/jul/2024 14:05:42] [:] INFO - HHH000037: Columns: [labr_created_date, labr_last_modified_date, labr_id, labr_active, labr_created_by, labr_last_modified_by, labr_desc, labr_lab_id]
+[06/jul/2024 14:05:42] [:] INFO - HHH000037: Columns: [labr_created_date, labr_last_modified_date, labr_id, labr_active, labr_created_by, labr_last_modified_by, labr_desc, labr_lab_id]
+[06/jul/2024 14:05:42] [:] INFO - HHH000108: Foreign keys: [fk_laboratoryrow_laboratory]
+[06/jul/2024 14:05:42] [:] INFO - HHH000108: Foreign keys: [fk_laboratoryrow_laboratory]
+[06/jul/2024 14:05:42] [:] INFO - HHH000126: Indexes: [fk_laboratoryrow_laboratory, primary]
+[06/jul/2024 14:05:42] [:] INFO - HHH000126: Indexes: [fk_laboratoryrow_laboratory, primary]
+[06/jul/2024 14:05:42] [:] INFO - HHH000261: Table found: oh.malnutritioncontrol
+[06/jul/2024 14:05:42] [:] INFO - HHH000261: Table found: oh.malnutritioncontrol
+[06/jul/2024 14:05:42] [:] INFO - HHH000037: Columns: [mln_created_by, mln_active, mln_created_date, mln_last_modified_by, mln_last_modified_date, mln_date_supp, mln_lock, mln_height, mln_id, mln_weight, mnl_date_conf, mln_adm_id]
+[06/jul/2024 14:05:42] [:] INFO - HHH000037: Columns: [mln_created_by, mln_active, mln_created_date, mln_last_modified_by, mln_last_modified_date, mln_date_supp, mln_lock, mln_height, mln_id, mln_weight, mnl_date_conf, mln_adm_id]
+[06/jul/2024 14:05:42] [:] INFO - HHH000108: Foreign keys: []
+[06/jul/2024 14:05:42] [:] INFO - HHH000108: Foreign keys: []
+[06/jul/2024 14:05:42] [:] INFO - HHH000126: Indexes: [fk_66q4m8qrd89bpjhsrfpp5nqck, primary]
+[06/jul/2024 14:05:42] [:] INFO - HHH000126: Indexes: [fk_66q4m8qrd89bpjhsrfpp5nqck, primary]
+[06/jul/2024 14:05:42] [:] INFO - HHH000261: Table found: oh.medicaldsr
+[06/jul/2024 14:05:42] [:] INFO - HHH000261: Table found: oh.medicaldsr
+[06/jul/2024 14:05:42] [:] INFO - HHH000037: Columns: [mdsr_code, mdsr_ini_stock_qti, mdsr_out_qti, mdsr_last_modified_date, mdsr_desc, mdsr_created_date, mdsr_min_stock_qti, mdsr_lock, mdsr_pcs_x_pck, mdsr_id, mdsr_mdsrt_id_a, mdsr_last_modified_by, mdsr_active, mdsr_in_qti, mdsr_created_by]
+[06/jul/2024 14:05:42] [:] INFO - HHH000037: Columns: [mdsr_code, mdsr_ini_stock_qti, mdsr_out_qti, mdsr_last_modified_date, mdsr_desc, mdsr_created_date, mdsr_min_stock_qti, mdsr_lock, mdsr_pcs_x_pck, mdsr_id, mdsr_mdsrt_id_a, mdsr_last_modified_by, mdsr_active, mdsr_in_qti, mdsr_created_by]
+[06/jul/2024 14:05:42] [:] INFO - HHH000108: Foreign keys: [fk_medicaldsr_medicaldsrtype]
+[06/jul/2024 14:05:42] [:] INFO - HHH000108: Foreign keys: [fk_medicaldsr_medicaldsrtype]
+[06/jul/2024 14:05:42] [:] INFO - HHH000126: Indexes: [mdsr_mdsrt_id_a, primary]
+[06/jul/2024 14:05:42] [:] INFO - HHH000126: Indexes: [mdsr_mdsrt_id_a, primary]
+[06/jul/2024 14:05:42] [:] INFO - HHH000261: Table found: oh.medicaldsrlot
+[06/jul/2024 14:05:42] [:] INFO - HHH000261: Table found: oh.medicaldsrlot
+[06/jul/2024 14:05:42] [:] INFO - HHH000037: Columns: [lt_prep_date, lt_created_date, lt_lock, lt_created_by, lt_cost, lt_due_date, lt_id_a, lt_last_modified_date, lt_active, lt_mdsr_id, lt_last_modified_by]
+[06/jul/2024 14:05:42] [:] INFO - HHH000037: Columns: [lt_prep_date, lt_created_date, lt_lock, lt_created_by, lt_cost, lt_due_date, lt_id_a, lt_last_modified_date, lt_active, lt_mdsr_id, lt_last_modified_by]
+[06/jul/2024 14:05:42] [:] INFO - HHH000108: Foreign keys: [fk_medicaldsrlot_medicaldsr]
+[06/jul/2024 14:05:42] [:] INFO - HHH000108: Foreign keys: [fk_medicaldsrlot_medicaldsr]
+[06/jul/2024 14:05:42] [:] INFO - HHH000126: Indexes: [fk_medicaldsrlot_medicaldsr_idx, primary]
+[06/jul/2024 14:05:42] [:] INFO - HHH000126: Indexes: [fk_medicaldsrlot_medicaldsr_idx, primary]
+[06/jul/2024 14:05:42] [:] INFO - HHH000261: Table found: oh.medicaldsrstockmov
+[06/jul/2024 14:05:42] [:] INFO - HHH000261: Table found: oh.medicaldsrstockmov
+[06/jul/2024 14:05:42] [:] INFO - HHH000037: Columns: [mmv_lock, mmv_last_modified_by, mmv_created_by, mmv_mmvt_id_a, mmv_mdsr_id, mmv_created_date, mmv_last_modified_date, mmv_id, mmv_lt_id_a, mmv_wrd_id_a, mmv_date, mmv_active, mmv_qty, mmv_from, mmv_refno]
+[06/jul/2024 14:05:42] [:] INFO - HHH000037: Columns: [mmv_lock, mmv_last_modified_by, mmv_created_by, mmv_mmvt_id_a, mmv_mdsr_id, mmv_created_date, mmv_last_modified_date, mmv_id, mmv_lt_id_a, mmv_wrd_id_a, mmv_date, mmv_active, mmv_qty, mmv_from, mmv_refno]
+[06/jul/2024 14:05:42] [:] INFO - HHH000108: Foreign keys: [fk_7yik87rw77yyrjbjh1rovx51s, fk_medicaldsrstockmov_medicaldsr, fk_medicaldsrstockmov_ward, fk_hh707ktimsbexaairs2a47yqq, fk_medicaldsrstockmov_medicaldsrstockmovtype]
+[06/jul/2024 14:05:42] [:] INFO - HHH000108: Foreign keys: [fk_7yik87rw77yyrjbjh1rovx51s, fk_medicaldsrstockmov_medicaldsr, fk_medicaldsrstockmov_ward, fk_hh707ktimsbexaairs2a47yqq, fk_medicaldsrstockmov_medicaldsrstockmovtype]
+[06/jul/2024 14:05:42] [:] INFO - HHH000126: Indexes: [fk_7yik87rw77yyrjbjh1rovx51s, fk_medicaldsrstockmov_medicaldsr, fk_medicaldsrstockmov_ward, fk_hh707ktimsbexaairs2a47yqq, fk_medicaldsrstockmov_medicaldsrstockmovtype, primary]
+[06/jul/2024 14:05:42] [:] INFO - HHH000126: Indexes: [fk_7yik87rw77yyrjbjh1rovx51s, fk_medicaldsrstockmov_medicaldsr, fk_medicaldsrstockmov_ward, fk_hh707ktimsbexaairs2a47yqq, fk_medicaldsrstockmov_medicaldsrstockmovtype, primary]
+[06/jul/2024 14:05:42] [:] INFO - HHH000261: Table found: oh.medicaldsrstockmovtype
+[06/jul/2024 14:05:42] [:] INFO - HHH000261: Table found: oh.medicaldsrstockmovtype
+[06/jul/2024 14:05:42] [:] INFO - HHH000037: Columns: [mmvt_last_modified_by, mmvt_created_date, mmvt_desc, mmvt_type, mmvt_last_modified_date, mmvt_id_a, mmvt_created_by, mmvt_active]
+[06/jul/2024 14:05:42] [:] INFO - HHH000037: Columns: [mmvt_last_modified_by, mmvt_created_date, mmvt_desc, mmvt_type, mmvt_last_modified_date, mmvt_id_a, mmvt_created_by, mmvt_active]
+[06/jul/2024 14:05:42] [:] INFO - HHH000108: Foreign keys: []
+[06/jul/2024 14:05:42] [:] INFO - HHH000108: Foreign keys: []
+[06/jul/2024 14:05:42] [:] INFO - HHH000126: Indexes: [primary]
+[06/jul/2024 14:05:42] [:] INFO - HHH000126: Indexes: [primary]
+[06/jul/2024 14:05:42] [:] INFO - HHH000261: Table found: oh.medicaldsrstockmovward
+[06/jul/2024 14:05:42] [:] INFO - HHH000261: Table found: oh.medicaldsrstockmovward
+[06/jul/2024 14:05:42] [:] INFO - HHH000037: Columns: [mmvn_created_by, mmvn_is_patient, mmvn_last_modified_date, mmvn_wrd_id_a_to, mmvn_wrd_id_a_from, mmvn_lt_id, mmvn_mdsr_units, mmvn_created_date, mmvn_last_modified_by, mmvn_pat_id, mmvn_wrd_id_a, mmvn_date, mmvn_pat_weight, mmvn_mdsr_id, mmvn_pat_age, mmvn_desc, mmvn_id, mmvn_active, mmvn_mdsr_qty]
+[06/jul/2024 14:05:42] [:] INFO - HHH000037: Columns: [mmvn_created_by, mmvn_is_patient, mmvn_last_modified_date, mmvn_wrd_id_a_to, mmvn_wrd_id_a_from, mmvn_lt_id, mmvn_mdsr_units, mmvn_created_date, mmvn_last_modified_by, mmvn_pat_id, mmvn_wrd_id_a, mmvn_date, mmvn_pat_weight, mmvn_mdsr_id, mmvn_pat_age, mmvn_desc, mmvn_id, mmvn_active, mmvn_mdsr_qty]
+[06/jul/2024 14:05:42] [:] INFO - HHH000108: Foreign keys: [fk_medicaldsrstockmovward_patient, fk_rh1dk8t1y9uqnl1xa2jd42xdu, fk_medicaldsrstockmovward_lot, fk_medicaldsrstockmovward_ward, fk_kmx41rtrt0wn6msaqu9wy375k]
+[06/jul/2024 14:05:42] [:] INFO - HHH000108: Foreign keys: [fk_medicaldsrstockmovward_patient, fk_rh1dk8t1y9uqnl1xa2jd42xdu, fk_medicaldsrstockmovward_lot, fk_medicaldsrstockmovward_ward, fk_kmx41rtrt0wn6msaqu9wy375k]
+[06/jul/2024 14:05:42] [:] INFO - HHH000126: Indexes: [fk_medicaldsrstockmovward_lot_idx, fk_rh1dk8t1y9uqnl1xa2jd42xdu, fk_medicaldsrstockmovward_patient_idx, fk_medicaldsrstockmovward_ward_idx, fk_kmx41rtrt0wn6msaqu9wy375k, primary]
+[06/jul/2024 14:05:42] [:] INFO - HHH000126: Indexes: [fk_medicaldsrstockmovward_lot_idx, fk_rh1dk8t1y9uqnl1xa2jd42xdu, fk_medicaldsrstockmovward_patient_idx, fk_medicaldsrstockmovward_ward_idx, fk_kmx41rtrt0wn6msaqu9wy375k, primary]
+[06/jul/2024 14:05:42] [:] INFO - HHH000261: Table found: oh.medicaldsrtype
+[06/jul/2024 14:05:42] [:] INFO - HHH000261: Table found: oh.medicaldsrtype
+[06/jul/2024 14:05:42] [:] INFO - HHH000037: Columns: [mdsrt_id_a, mdsrt_created_by, mdsrt_last_modified_by, mdsrt_created_date, mdsrt_last_modified_date, mdsrt_desc, mdsrt_active]
+[06/jul/2024 14:05:42] [:] INFO - HHH000037: Columns: [mdsrt_id_a, mdsrt_created_by, mdsrt_last_modified_by, mdsrt_created_date, mdsrt_last_modified_date, mdsrt_desc, mdsrt_active]
+[06/jul/2024 14:05:42] [:] INFO - HHH000108: Foreign keys: []
+[06/jul/2024 14:05:42] [:] INFO - HHH000108: Foreign keys: []
+[06/jul/2024 14:05:42] [:] INFO - HHH000126: Indexes: [primary]
+[06/jul/2024 14:05:42] [:] INFO - HHH000126: Indexes: [primary]
+[06/jul/2024 14:05:42] [:] INFO - HHH000261: Table found: oh.medicaldsrward
+[06/jul/2024 14:05:42] [:] INFO - HHH000261: Table found: oh.medicaldsrward
+[06/jul/2024 14:05:42] [:] INFO - HHH000037: Columns: [mdsrwrd_wrd_id_a, mdsrwrd_mdsr_id, mdsrwrd_in_qti, mdsrwrd_out_qti, mdsrwrd_created_by, mdsrwrd_created_date, mdsrwrd_active, mdsrwrd_last_modified_by, mdsrwrd_lt_id_a, mdsrwrd_last_modified_date]
+[06/jul/2024 14:05:42] [:] INFO - HHH000037: Columns: [mdsrwrd_wrd_id_a, mdsrwrd_mdsr_id, mdsrwrd_in_qti, mdsrwrd_out_qti, mdsrwrd_created_by, mdsrwrd_created_date, mdsrwrd_active, mdsrwrd_last_modified_by, mdsrwrd_lt_id_a, mdsrwrd_last_modified_date]
+[06/jul/2024 14:05:42] [:] INFO - HHH000108: Foreign keys: [fk_medicaldsrward_medicaldsr, fk_medicaldsrward_medicaldsrlot, fk_medicaldsrward_ward]
+[06/jul/2024 14:05:42] [:] INFO - HHH000108: Foreign keys: [fk_medicaldsrward_medicaldsr, fk_medicaldsrward_medicaldsrlot, fk_medicaldsrward_ward]
+[06/jul/2024 14:05:42] [:] INFO - HHH000126: Indexes: [fk_medicaldsrward_ward_idx, fk_medicaldsrward_medicaldsr_idx, fk_medicaldsrward_medicaldsrlot_idx, primary]
+[06/jul/2024 14:05:42] [:] INFO - HHH000126: Indexes: [fk_medicaldsrward_ward_idx, fk_medicaldsrward_medicaldsr_idx, fk_medicaldsrward_medicaldsrlot_idx, primary]
+[06/jul/2024 14:05:42] [:] INFO - HHH000261: Table found: oh.menuitem
+[06/jul/2024 14:05:42] [:] INFO - HHH000261: Table found: oh.menuitem
+[06/jul/2024 14:05:42] [:] INFO - HHH000037: Columns: [mni_id_a, mni_label, mni_submenu, mni_class, mni_tooltip, mni_btn_label, mni_is_submenu, mni_shortcut, mni_position]
+[06/jul/2024 14:05:42] [:] INFO - HHH000037: Columns: [mni_id_a, mni_label, mni_submenu, mni_class, mni_tooltip, mni_btn_label, mni_is_submenu, mni_shortcut, mni_position]
+[06/jul/2024 14:05:42] [:] INFO - HHH000108: Foreign keys: []
+[06/jul/2024 14:05:42] [:] INFO - HHH000108: Foreign keys: []
+[06/jul/2024 14:05:42] [:] INFO - HHH000126: Indexes: [primary]
+[06/jul/2024 14:05:42] [:] INFO - HHH000126: Indexes: [primary]
+[06/jul/2024 14:05:42] [:] INFO - HHH000261: Table found: oh.opd
+[06/jul/2024 14:05:42] [:] INFO - HHH000261: Table found: oh.opd
+[06/jul/2024 14:05:42] [:] INFO - HHH000037: Columns: [opd_date, opd_date_vis, opd_note, opd_age, opd_referral_from, opd_lock, opd_created_by, opd_sex, opd_pat_id, opd_referral_to, opd_last_modified_by, opd_date_next_vis, opd_dis_id_a_3, opd_dis_id_a_2, opd_usr_id_a, opd_id, opd_prog_year, opd_last_modified_date, opd_dis_id_a, opd_new_pat, opd_created_date, opd_active]
+[06/jul/2024 14:05:42] [:] INFO - HHH000037: Columns: [opd_date, opd_date_vis, opd_note, opd_age, opd_referral_from, opd_lock, opd_created_by, opd_sex, opd_pat_id, opd_referral_to, opd_last_modified_by, opd_date_next_vis, opd_dis_id_a_3, opd_dis_id_a_2, opd_usr_id_a, opd_id, opd_prog_year, opd_last_modified_date, opd_dis_id_a, opd_new_pat, opd_created_date, opd_active]
+[06/jul/2024 14:05:42] [:] INFO - HHH000108: Foreign keys: [fk_opd_disease_3, fk_opd_disease, fk_opd_disease_2, fk_opd_patient]
+[06/jul/2024 14:05:42] [:] INFO - HHH000108: Foreign keys: [fk_opd_disease_3, fk_opd_disease, fk_opd_disease_2, fk_opd_patient]
+[06/jul/2024 14:05:42] [:] INFO - HHH000126: Indexes: [fk_opd_disease_3, fk_opd_disease, fk_opd_disease_2, fk_opd_patient, primary]
+[06/jul/2024 14:05:42] [:] INFO - HHH000126: Indexes: [fk_opd_disease_3, fk_opd_disease, fk_opd_disease_2, fk_opd_patient, primary]
+[06/jul/2024 14:05:42] [:] INFO - HHH000261: Table found: oh.operation
+[06/jul/2024 14:05:42] [:] INFO - HHH000261: Table found: oh.operation
+[06/jul/2024 14:05:42] [:] INFO - HHH000037: Columns: [ope_for, ope_last_modified_by, ope_desc, ope_lock, ope_id_a, ope_ocl_id_a, ope_stat, ope_created_date, ope_last_modified_date, ope_created_by, ope_active]
+[06/jul/2024 14:05:42] [:] INFO - HHH000037: Columns: [ope_for, ope_last_modified_by, ope_desc, ope_lock, ope_id_a, ope_ocl_id_a, ope_stat, ope_created_date, ope_last_modified_date, ope_created_by, ope_active]
+[06/jul/2024 14:05:42] [:] INFO - HHH000108: Foreign keys: [fk_operation_operationtype]
+[06/jul/2024 14:05:42] [:] INFO - HHH000108: Foreign keys: [fk_operation_operationtype]
+[06/jul/2024 14:05:42] [:] INFO - HHH000126: Indexes: [fk_operation_operationtype, primary]
+[06/jul/2024 14:05:42] [:] INFO - HHH000126: Indexes: [fk_operation_operationtype, primary]
+[06/jul/2024 14:05:42] [:] INFO - HHH000261: Table found: oh.operationrow
+[06/jul/2024 14:05:42] [:] INFO - HHH000261: Table found: oh.operationrow
+[06/jul/2024 14:05:42] [:] INFO - HHH000037: Columns: [oper_result, oper_opdate, oper_created_by, oper_remarks, oper_active, oper_bill_id, oper_trans_unit, oper_prescriber, oper_opd_id, oper_last_modified_date, oper_id_a, oper_admission_id, oper_id, oper_created_date, oper_last_modified_by]
+[06/jul/2024 14:05:42] [:] INFO - HHH000037: Columns: [oper_result, oper_opdate, oper_created_by, oper_remarks, oper_active, oper_bill_id, oper_trans_unit, oper_prescriber, oper_opd_id, oper_last_modified_date, oper_id_a, oper_admission_id, oper_id, oper_created_date, oper_last_modified_by]
+[06/jul/2024 14:05:42] [:] INFO - HHH000108: Foreign keys: [fk_ran2i50125kpho7sbfjev22br, fk_g83y9kmg8hk9n4gkyccgcwl59, fk_bpyjq3pxlcpmj6dk00rdppllk, fk_3w22ep28spkoi47rmqryighg]
+[06/jul/2024 14:05:42] [:] INFO - HHH000108: Foreign keys: [fk_ran2i50125kpho7sbfjev22br, fk_g83y9kmg8hk9n4gkyccgcwl59, fk_bpyjq3pxlcpmj6dk00rdppllk, fk_3w22ep28spkoi47rmqryighg]
+[06/jul/2024 14:05:42] [:] INFO - HHH000126: Indexes: [fk_ran2i50125kpho7sbfjev22br, fk_g83y9kmg8hk9n4gkyccgcwl59, fk_bpyjq3pxlcpmj6dk00rdppllk, fk_3w22ep28spkoi47rmqryighg, primary]
+[06/jul/2024 14:05:42] [:] INFO - HHH000126: Indexes: [fk_ran2i50125kpho7sbfjev22br, fk_g83y9kmg8hk9n4gkyccgcwl59, fk_bpyjq3pxlcpmj6dk00rdppllk, fk_3w22ep28spkoi47rmqryighg, primary]
+[06/jul/2024 14:05:42] [:] INFO - HHH000261: Table found: oh.operationtype
+[06/jul/2024 14:05:42] [:] INFO - HHH000261: Table found: oh.operationtype
+[06/jul/2024 14:05:42] [:] INFO - HHH000037: Columns: [ocl_active, ocl_id_a, ocl_last_modified_date, ocl_desc, ocl_last_modified_by, ocl_type, ocl_created_date, ocl_created_by]
+[06/jul/2024 14:05:42] [:] INFO - HHH000037: Columns: [ocl_active, ocl_id_a, ocl_last_modified_date, ocl_desc, ocl_last_modified_by, ocl_type, ocl_created_date, ocl_created_by]
+[06/jul/2024 14:05:42] [:] INFO - HHH000108: Foreign keys: []
+[06/jul/2024 14:05:42] [:] INFO - HHH000108: Foreign keys: []
+[06/jul/2024 14:05:42] [:] INFO - HHH000126: Indexes: [primary]
+[06/jul/2024 14:05:42] [:] INFO - HHH000126: Indexes: [primary]
+[06/jul/2024 14:05:42] [:] INFO - HHH000261: Table found: oh.patient
+[06/jul/2024 14:05:42] [:] INFO - HHH000261: Table found: oh.patient
+[06/jul/2024 14:05:42] [:] INFO - HHH000037: Columns: [pat_created_by, pat_sex, pat_name, pat_btype, pat_last_modified_by, pat_moth, pat_mar_stat, pat_active, pat_fname, pat_addr, pat_fath, pat_next_kin, pat_lock, pat_sname, pat_id, pat_city, pat_deleted, pat_agetype, pat_tele, pat_taxcode, pat_esta, pat_age, pat_fath_name, pat_note, pat_last_modified_date, pat_created_date, pat_bdate, profile_photo_id, pat_timestamp, pat_ledu, pat_moth_name, pat_ptoge, pat_profession]
+[06/jul/2024 14:05:42] [:] INFO - HHH000037: Columns: [pat_created_by, pat_sex, pat_name, pat_btype, pat_last_modified_by, pat_moth, pat_mar_stat, pat_active, pat_fname, pat_addr, pat_fath, pat_next_kin, pat_lock, pat_sname, pat_id, pat_city, pat_deleted, pat_agetype, pat_tele, pat_taxcode, pat_esta, pat_age, pat_fath_name, pat_note, pat_last_modified_date, pat_created_date, pat_bdate, profile_photo_id, pat_timestamp, pat_ledu, pat_moth_name, pat_ptoge, pat_profession]
+[06/jul/2024 14:05:42] [:] INFO - HHH000108: Foreign keys: []
+[06/jul/2024 14:05:42] [:] INFO - HHH000108: Foreign keys: []
+[06/jul/2024 14:05:42] [:] INFO - HHH000126: Indexes: [primary]
+[06/jul/2024 14:05:42] [:] INFO - HHH000126: Indexes: [primary]
+[06/jul/2024 14:05:42] [:] INFO - HHH000261: Table found: oh.patientexamination
+[06/jul/2024 14:05:42] [:] INFO - HHH000261: Table found: oh.patientexamination
+[06/jul/2024 14:05:42] [:] INFO - HHH000037: Columns: [pex_hr, pex_last_modified_by, pex_date, pex_hgt, pex_note, pex_ap_min, pex_bowel_desc, pex_ausc, pex_ap_max, pex_created_by, pex_active, pex_diuresis, pex_id, pex_sat, pex_last_modified_date, pex_height, pex_created_date, pex_pat_id, pex_rr, pex_weight, pex_diuresis_desc, pex_temp]
+[06/jul/2024 14:05:42] [:] INFO - HHH000037: Columns: [pex_hr, pex_last_modified_by, pex_date, pex_hgt, pex_note, pex_ap_min, pex_bowel_desc, pex_ausc, pex_ap_max, pex_created_by, pex_active, pex_diuresis, pex_id, pex_sat, pex_last_modified_date, pex_height, pex_created_date, pex_pat_id, pex_rr, pex_weight, pex_diuresis_desc, pex_temp]
+[06/jul/2024 14:05:42] [:] INFO - HHH000108: Foreign keys: [fk_patientexamination_patient]
+[06/jul/2024 14:05:42] [:] INFO - HHH000108: Foreign keys: [fk_patientexamination_patient]
+[06/jul/2024 14:05:42] [:] INFO - HHH000126: Indexes: [pex_pat_id, primary]
+[06/jul/2024 14:05:42] [:] INFO - HHH000126: Indexes: [pex_pat_id, primary]
+[06/jul/2024 14:05:42] [:] INFO - HHH000261: Table found: oh.patientvaccine
+[06/jul/2024 14:05:42] [:] INFO - HHH000261: Table found: oh.patientvaccine
+[06/jul/2024 14:05:42] [:] INFO - HHH000037: Columns: [pav_created_date, pav_yprog, pav_pat_id, pav_id, pav_created_by, pav_active, pav_vac_id_a, pav_lock, pav_date, pav_last_modified_by, pav_last_modified_date]
+[06/jul/2024 14:05:42] [:] INFO - HHH000037: Columns: [pav_created_date, pav_yprog, pav_pat_id, pav_id, pav_created_by, pav_active, pav_vac_id_a, pav_lock, pav_date, pav_last_modified_by, pav_last_modified_date]
+[06/jul/2024 14:05:42] [:] INFO - HHH000108: Foreign keys: [fk_patientvaccine_patient, fk_patientvaccine_vaccine]
+[06/jul/2024 14:05:42] [:] INFO - HHH000108: Foreign keys: [fk_patientvaccine_patient, fk_patientvaccine_vaccine]
+[06/jul/2024 14:05:42] [:] INFO - HHH000126: Indexes: [fk_patientvaccine_patient, fk_patientvaccine_vaccine, primary]
+[06/jul/2024 14:05:42] [:] INFO - HHH000126: Indexes: [fk_patientvaccine_patient, fk_patientvaccine_vaccine, primary]
+[06/jul/2024 14:05:42] [:] INFO - HHH000261: Table found: oh.patient_profile_photo
+[06/jul/2024 14:05:42] [:] INFO - HHH000261: Table found: oh.patient_profile_photo
+[06/jul/2024 14:05:42] [:] INFO - HHH000037: Columns: [pat_profile_photo_id, pat_photo]
+[06/jul/2024 14:05:42] [:] INFO - HHH000037: Columns: [pat_profile_photo_id, pat_photo]
+[06/jul/2024 14:05:42] [:] INFO - HHH000108: Foreign keys: []
+[06/jul/2024 14:05:42] [:] INFO - HHH000108: Foreign keys: []
+[06/jul/2024 14:05:42] [:] INFO - HHH000126: Indexes: [primary]
+[06/jul/2024 14:05:42] [:] INFO - HHH000126: Indexes: [primary]
+[06/jul/2024 14:05:42] [:] INFO - HHH000261: Table found: oh.pregnanttreatmenttype
+[06/jul/2024 14:05:42] [:] INFO - HHH000261: Table found: oh.pregnanttreatmenttype
+[06/jul/2024 14:05:42] [:] INFO - HHH000037: Columns: [ptt_desc, ptt_created_by, ptt_last_modified_by, ptt_id_a, ptt_last_modified_date, ptt_created_date, ptt_active]
+[06/jul/2024 14:05:42] [:] INFO - HHH000037: Columns: [ptt_desc, ptt_created_by, ptt_last_modified_by, ptt_id_a, ptt_last_modified_date, ptt_created_date, ptt_active]
+[06/jul/2024 14:05:42] [:] INFO - HHH000108: Foreign keys: []
+[06/jul/2024 14:05:42] [:] INFO - HHH000108: Foreign keys: []
+[06/jul/2024 14:05:42] [:] INFO - HHH000126: Indexes: [primary]
+[06/jul/2024 14:05:42] [:] INFO - HHH000126: Indexes: [primary]
+[06/jul/2024 14:05:42] [:] INFO - HHH000261: Table found: oh.pricelists
+[06/jul/2024 14:05:42] [:] INFO - HHH000261: Table found: oh.pricelists
+[06/jul/2024 14:05:42] [:] INFO - HHH000037: Columns: [lst_created_date, lst_desc, lst_currency, lst_last_modified_by, lst_name, lst_code, lst_active, lst_id, lst_created_by, lst_last_modified_date]
+[06/jul/2024 14:05:42] [:] INFO - HHH000037: Columns: [lst_created_date, lst_desc, lst_currency, lst_last_modified_by, lst_name, lst_code, lst_active, lst_id, lst_created_by, lst_last_modified_date]
+[06/jul/2024 14:05:42] [:] INFO - HHH000108: Foreign keys: []
+[06/jul/2024 14:05:42] [:] INFO - HHH000108: Foreign keys: []
+[06/jul/2024 14:05:42] [:] INFO - HHH000126: Indexes: [primary]
+[06/jul/2024 14:05:42] [:] INFO - HHH000126: Indexes: [primary]
+[06/jul/2024 14:05:42] [:] INFO - HHH000261: Table found: oh.prices
+[06/jul/2024 14:05:42] [:] INFO - HHH000261: Table found: oh.prices
+[06/jul/2024 14:05:42] [:] INFO - HHH000037: Columns: [prc_price, prc_last_modified_by, prc_item, prc_grp, prc_last_modified_date, prc_id, prc_created_by, prc_active, prc_created_date, prc_desc, prc_lst_id]
+[06/jul/2024 14:05:42] [:] INFO - HHH000037: Columns: [prc_price, prc_last_modified_by, prc_item, prc_grp, prc_last_modified_date, prc_id, prc_created_by, prc_active, prc_created_date, prc_desc, prc_lst_id]
+[06/jul/2024 14:05:42] [:] INFO - HHH000108: Foreign keys: [fk_prices_pricelists]
+[06/jul/2024 14:05:42] [:] INFO - HHH000108: Foreign keys: [fk_prices_pricelists]
+[06/jul/2024 14:05:42] [:] INFO - HHH000126: Indexes: [fk_prices_pricelists, primary]
+[06/jul/2024 14:05:42] [:] INFO - HHH000126: Indexes: [fk_prices_pricelists, primary]
+[06/jul/2024 14:05:42] [:] INFO - HHH000261: Table found: oh.pricesothers
+[06/jul/2024 14:05:42] [:] INFO - HHH000261: Table found: oh.pricesothers
+[06/jul/2024 14:05:42] [:] INFO - HHH000037: Columns: [oth_last_modified_date, oth_undefined, oth_created_date, oth_ipd_include, oth_id, oth_discharge, oth_active, oth_opd_include, oth_desc, oth_daily, oth_created_by, oth_last_modified_by, oth_code]
+[06/jul/2024 14:05:42] [:] INFO - HHH000037: Columns: [oth_last_modified_date, oth_undefined, oth_created_date, oth_ipd_include, oth_id, oth_discharge, oth_active, oth_opd_include, oth_desc, oth_daily, oth_created_by, oth_last_modified_by, oth_code]
+[06/jul/2024 14:05:42] [:] INFO - HHH000108: Foreign keys: []
+[06/jul/2024 14:05:42] [:] INFO - HHH000108: Foreign keys: []
+[06/jul/2024 14:05:42] [:] INFO - HHH000126: Indexes: [primary]
+[06/jul/2024 14:05:42] [:] INFO - HHH000126: Indexes: [primary]
+[06/jul/2024 14:05:42] [:] INFO - HHH000261: Table found: oh.sms
+[06/jul/2024 14:05:42] [:] INFO - HHH000261: Table found: oh.sms
+[06/jul/2024 14:05:42] [:] INFO - HHH000037: Columns: [sms_date, sms_id, sms_mod, sms_date_sent, sms_user, sms_mod_id, sms_date_sched, sms_number, sms_text]
+[06/jul/2024 14:05:42] [:] INFO - HHH000037: Columns: [sms_date, sms_id, sms_mod, sms_date_sent, sms_user, sms_mod_id, sms_date_sched, sms_number, sms_text]
+[06/jul/2024 14:05:42] [:] INFO - HHH000108: Foreign keys: []
+[06/jul/2024 14:05:42] [:] INFO - HHH000108: Foreign keys: []
+[06/jul/2024 14:05:42] [:] INFO - HHH000126: Indexes: [primary]
+[06/jul/2024 14:05:42] [:] INFO - HHH000126: Indexes: [primary]
+[06/jul/2024 14:05:42] [:] INFO - HHH000261: Table found: oh.supplier
+[06/jul/2024 14:05:42] [:] INFO - HHH000261: Table found: oh.supplier
+[06/jul/2024 14:05:42] [:] INFO - HHH000037: Columns: [sup_created_by, sup_created_date, sup_phone, sup_fax, sup_address, sup_taxcode, sup_last_modified_by, sup_id, sup_note, sup_active, sup_name, sup_email, sup_last_modified_date, sup_deleted]
+[06/jul/2024 14:05:42] [:] INFO - HHH000037: Columns: [sup_created_by, sup_created_date, sup_phone, sup_fax, sup_address, sup_taxcode, sup_last_modified_by, sup_id, sup_note, sup_active, sup_name, sup_email, sup_last_modified_date, sup_deleted]
+[06/jul/2024 14:05:42] [:] INFO - HHH000108: Foreign keys: []
+[06/jul/2024 14:05:42] [:] INFO - HHH000108: Foreign keys: []
+[06/jul/2024 14:05:42] [:] INFO - HHH000126: Indexes: [primary]
+[06/jul/2024 14:05:42] [:] INFO - HHH000126: Indexes: [primary]
+[06/jul/2024 14:05:42] [:] INFO - HHH000261: Table found: oh.therapies
+[06/jul/2024 14:05:42] [:] INFO - HHH000261: Table found: oh.therapies
+[06/jul/2024 14:05:42] [:] INFO - HHH000037: Columns: [thr_sms, thr_last_modified_date, thr_qty, thr_pat_id, thr_freqinday, thr_startdate, thr_enddate, thr_note, thr_unt_id, thr_freqinprd, thr_mdsr_id, thr_created_by, thr_last_modified_by, thr_notify, thr_created_date, thr_id, thr_active]
+[06/jul/2024 14:05:42] [:] INFO - HHH000037: Columns: [thr_sms, thr_last_modified_date, thr_qty, thr_pat_id, thr_freqinday, thr_startdate, thr_enddate, thr_note, thr_unt_id, thr_freqinprd, thr_mdsr_id, thr_created_by, thr_last_modified_by, thr_notify, thr_created_date, thr_id, thr_active]
+[06/jul/2024 14:05:42] [:] INFO - HHH000108: Foreign keys: [fk_therapies_mdsr, fk_therapies_patient]
+[06/jul/2024 14:05:42] [:] INFO - HHH000108: Foreign keys: [fk_therapies_mdsr, fk_therapies_patient]
+[06/jul/2024 14:05:42] [:] INFO - HHH000126: Indexes: [fk_therapies_mdsr, fk_therapies_patient, primary]
+[06/jul/2024 14:05:42] [:] INFO - HHH000126: Indexes: [fk_therapies_mdsr, fk_therapies_patient, primary]
+[06/jul/2024 14:05:42] [:] INFO - HHH000261: Table found: oh.user
+[06/jul/2024 14:05:42] [:] INFO - HHH000261: Table found: oh.user
+[06/jul/2024 14:05:42] [:] INFO - HHH000037: Columns: [us_created_date, us_desc, us_passwd, us_last_modified_by, us_active, us_last_modified_date, us_id_a, us_created_by, us_ug_id_a]
+[06/jul/2024 14:05:42] [:] INFO - HHH000037: Columns: [us_created_date, us_desc, us_passwd, us_last_modified_by, us_active, us_last_modified_date, us_id_a, us_created_by, us_ug_id_a]
+[06/jul/2024 14:05:42] [:] INFO - HHH000108: Foreign keys: [fk_user_usergroup]
+[06/jul/2024 14:05:42] [:] INFO - HHH000108: Foreign keys: [fk_user_usergroup]
+[06/jul/2024 14:05:42] [:] INFO - HHH000126: Indexes: [fk_user_usergroup, primary]
+[06/jul/2024 14:05:42] [:] INFO - HHH000126: Indexes: [fk_user_usergroup, primary]
+[06/jul/2024 14:05:42] [:] INFO - HHH000261: Table found: oh.usergroup
+[06/jul/2024 14:05:42] [:] INFO - HHH000261: Table found: oh.usergroup
+[06/jul/2024 14:05:42] [:] INFO - HHH000037: Columns: [ug_id_a, ug_created_date, ug_created_by, ug_last_modified_by, ug_last_modified_date, ug_desc, ug_active]
+[06/jul/2024 14:05:42] [:] INFO - HHH000037: Columns: [ug_id_a, ug_created_date, ug_created_by, ug_last_modified_by, ug_last_modified_date, ug_desc, ug_active]
+[06/jul/2024 14:05:42] [:] INFO - HHH000108: Foreign keys: []
+[06/jul/2024 14:05:42] [:] INFO - HHH000108: Foreign keys: []
+[06/jul/2024 14:05:42] [:] INFO - HHH000126: Indexes: [primary]
+[06/jul/2024 14:05:42] [:] INFO - HHH000126: Indexes: [primary]
+[06/jul/2024 14:05:42] [:] INFO - HHH000261: Table found: oh.vaccine
+[06/jul/2024 14:05:42] [:] INFO - HHH000261: Table found: oh.vaccine
+[06/jul/2024 14:05:42] [:] INFO - HHH000037: Columns: [vac_created_by, vac_last_modified_by, vac_active, vac_vact_id_a, vac_id_a, vac_lock, vac_desc, vac_last_modified_date, vac_created_date]
+[06/jul/2024 14:05:42] [:] INFO - HHH000037: Columns: [vac_created_by, vac_last_modified_by, vac_active, vac_vact_id_a, vac_id_a, vac_lock, vac_desc, vac_last_modified_date, vac_created_date]
+[06/jul/2024 14:05:42] [:] INFO - HHH000108: Foreign keys: [fk_vaccine_vaccinetype]
+[06/jul/2024 14:05:42] [:] INFO - HHH000108: Foreign keys: [fk_vaccine_vaccinetype]
+[06/jul/2024 14:05:42] [:] INFO - HHH000126: Indexes: [fk_vaccine_vaccinetype, primary]
+[06/jul/2024 14:05:42] [:] INFO - HHH000126: Indexes: [fk_vaccine_vaccinetype, primary]
+[06/jul/2024 14:05:42] [:] INFO - HHH000261: Table found: oh.vaccinetype
+[06/jul/2024 14:05:42] [:] INFO - HHH000261: Table found: oh.vaccinetype
+[06/jul/2024 14:05:42] [:] INFO - HHH000037: Columns: [vact_created_date, vact_id_a, vact_active, vact_desc, vact_created_by, vact_last_modified_by, vact_last_modified_date]
+[06/jul/2024 14:05:42] [:] INFO - HHH000037: Columns: [vact_created_date, vact_id_a, vact_active, vact_desc, vact_created_by, vact_last_modified_by, vact_last_modified_date]
+[06/jul/2024 14:05:42] [:] INFO - HHH000108: Foreign keys: []
+[06/jul/2024 14:05:42] [:] INFO - HHH000108: Foreign keys: []
+[06/jul/2024 14:05:42] [:] INFO - HHH000126: Indexes: [primary]
+[06/jul/2024 14:05:42] [:] INFO - HHH000126: Indexes: [primary]
+[06/jul/2024 14:05:42] [:] INFO - HHH000261: Table found: oh.visits
+[06/jul/2024 14:05:42] [:] INFO - HHH000261: Table found: oh.visits
+[06/jul/2024 14:05:42] [:] INFO - HHH000037: Columns: [vst_created_by, vst_pat_id, vst_id, vst_date, vst_created_date, vst_note, vst_service, vst_active, vst_duration, vst_wrd_id_a, vst_last_modified_date, vst_last_modified_by, vst_sms]
+[06/jul/2024 14:05:42] [:] INFO - HHH000037: Columns: [vst_created_by, vst_pat_id, vst_id, vst_date, vst_created_date, vst_note, vst_service, vst_active, vst_duration, vst_wrd_id_a, vst_last_modified_date, vst_last_modified_by, vst_sms]
+[06/jul/2024 14:05:42] [:] INFO - HHH000108: Foreign keys: [fk_visits_patient, fk_visits_ward]
+[06/jul/2024 14:05:42] [:] INFO - HHH000108: Foreign keys: [fk_visits_patient, fk_visits_ward]
+[06/jul/2024 14:05:42] [:] INFO - HHH000126: Indexes: [fk_visits_patient, fk_visits_ward, primary]
+[06/jul/2024 14:05:42] [:] INFO - HHH000126: Indexes: [fk_visits_patient, fk_visits_ward, primary]
+[06/jul/2024 14:05:42] [:] INFO - HHH000261: Table found: oh.ward
+[06/jul/2024 14:05:42] [:] INFO - HHH000261: Table found: oh.ward
+[06/jul/2024 14:05:42] [:] INFO - HHH000037: Columns: [wrd_name, wrd_email, wrd_ndoc, wrd_lock, wrd_tele, wrd_is_pharmacy, wrd_is_male, wrd_active, wrd_id_a, wrd_last_modified_by, wrd_nqua_nurs, wrd_nbeds, wrd_is_female, wrd_created_date, wrd_last_modified_date, wrd_fax, wrd_created_by]
+[06/jul/2024 14:05:42] [:] INFO - HHH000037: Columns: [wrd_name, wrd_email, wrd_ndoc, wrd_lock, wrd_tele, wrd_is_pharmacy, wrd_is_male, wrd_active, wrd_id_a, wrd_last_modified_by, wrd_nqua_nurs, wrd_nbeds, wrd_is_female, wrd_created_date, wrd_last_modified_date, wrd_fax, wrd_created_by]
+[06/jul/2024 14:05:42] [:] INFO - HHH000108: Foreign keys: []
+[06/jul/2024 14:05:42] [:] INFO - HHH000108: Foreign keys: []
+[06/jul/2024 14:05:42] [:] INFO - HHH000126: Indexes: [primary]
+[06/jul/2024 14:05:42] [:] INFO - HHH000126: Indexes: [primary]
+[06/jul/2024 14:05:42] [:] ERROR - HHH000388: Unsuccessful: alter table MEDICALDSRSTOCKMOVWARD add index FK_dv14nvlaoqgjet58l5j5dvj2o (MMVN_MDSR_ID), add constraint FK_dv14nvlaoqgjet58l5j5dvj2o foreign key (MMVN_MDSR_ID) references MEDICALDSR (MDSR_ID)
+[06/jul/2024 14:05:42] [:] ERROR - HHH000388: Unsuccessful: alter table MEDICALDSRSTOCKMOVWARD add index FK_dv14nvlaoqgjet58l5j5dvj2o (MMVN_MDSR_ID), add constraint FK_dv14nvlaoqgjet58l5j5dvj2o foreign key (MMVN_MDSR_ID) references MEDICALDSR (MDSR_ID)
+[06/jul/2024 14:05:42] [:] ERROR - Can't create table `oh`.`medicaldsrstockmovward` (errno: 150 "Foreign key constraint is incorrectly formed")
+[06/jul/2024 14:05:42] [:] ERROR - Can't create table `oh`.`medicaldsrstockmovward` (errno: 150 "Foreign key constraint is incorrectly formed")
+[06/jul/2024 14:05:42] [:] ERROR - HHH000388: Unsuccessful: alter table PATIENT add index FK_5hi42h8umin9u94vuey9qu7g4 (PROFILE_PHOTO_ID), add constraint FK_5hi42h8umin9u94vuey9qu7g4 foreign key (PROFILE_PHOTO_ID) references PATIENT_PROFILE_PHOTO (PAT_PROFILE_PHOTO_ID)
+[06/jul/2024 14:05:42] [:] ERROR - HHH000388: Unsuccessful: alter table PATIENT add index FK_5hi42h8umin9u94vuey9qu7g4 (PROFILE_PHOTO_ID), add constraint FK_5hi42h8umin9u94vuey9qu7g4 foreign key (PROFILE_PHOTO_ID) references PATIENT_PROFILE_PHOTO (PAT_PROFILE_PHOTO_ID)
+[06/jul/2024 14:05:42] [:] ERROR - Can't create table `oh`.`patient` (errno: 150 "Foreign key constraint is incorrectly formed")
+[06/jul/2024 14:05:42] [:] ERROR - Can't create table `oh`.`patient` (errno: 150 "Foreign key constraint is incorrectly formed")
+[06/jul/2024 14:05:42] [:] INFO - HHH000232: Schema update complete
+[06/jul/2024 14:05:42] [:] INFO - HHH000232: Schema update complete
+[06/jul/2024 14:05:42] [:] INFO - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[06/jul/2024 14:05:43] [:] INFO - SMS Sender GSM started...
+[06/jul/2024 14:05:43] [:] INFO - File sms.properties loaded.
+[06/jul/2024 14:05:44] [:] INFO - File examination.properties loaded.
 ]]></system-out>
   </testcase>
-  <testcase name="testIoSupplierGetList" classname="org.isf.supplier.test.Tests" time="0.04"/>
-  <testcase name="testIoSupplierSaveOrUpdate" classname="org.isf.supplier.test.Tests" time="0.025"/>
-  <testcase name="testSupplierEquals" classname="org.isf.supplier.test.Tests" time="0.017"/>
-  <testcase name="testSupplierToString" classname="org.isf.supplier.test.Tests" time="0.017"/>
-  <testcase name="testSupplierGets" classname="org.isf.supplier.test.Tests" time="0.018"/>
-  <testcase name="testSupplierSets" classname="org.isf.supplier.test.Tests" time="0.016"/>
-  <testcase name="testIoSupplierGetAll" classname="org.isf.supplier.test.Tests" time="0.016"/>
-  <testcase name="testSupplierHashCode" classname="org.isf.supplier.test.Tests" time="0.012"/>
-  <testcase name="testMgrSupplierGetAll" classname="org.isf.supplier.test.Tests" time="0.012"/>
-  <testcase name="testMgrSupplierSaveOrUpdate" classname="org.isf.supplier.test.Tests" time="0.011"/>
-  <testcase name="testMgrGetHashMap" classname="org.isf.supplier.test.Tests" time="0.023"/>
-  <testcase name="testMgrSupplierGetByID" classname="org.isf.supplier.test.Tests" time="0.01"/>
-  <testcase name="testMgrSupplierGetList" classname="org.isf.supplier.test.Tests" time="0.008"/>
+  <testcase name="testIoSupplierGetList" classname="org.isf.supplier.test.Tests" time="0.738"/>
+  <testcase name="testIoSupplierSaveOrUpdate" classname="org.isf.supplier.test.Tests" time="0.686"/>
+  <testcase name="testSupplierEquals" classname="org.isf.supplier.test.Tests" time="0.721"/>
+  <testcase name="testSupplierToString" classname="org.isf.supplier.test.Tests" time="0.682"/>
+  <testcase name="testSupplierGets" classname="org.isf.supplier.test.Tests" time="0.711"/>
+  <testcase name="testSupplierSets" classname="org.isf.supplier.test.Tests" time="0.711"/>
+  <testcase name="testIoSupplierGetAll" classname="org.isf.supplier.test.Tests" time="0.699"/>
+  <testcase name="testSupplierHashCode" classname="org.isf.supplier.test.Tests" time="0.692"/>
+  <testcase name="testMgrSupplierGetAll" classname="org.isf.supplier.test.Tests" time="0.685"/>
+  <testcase name="testMgrSupplierSaveOrUpdate" classname="org.isf.supplier.test.Tests" time="0.662"/>
+  <testcase name="testMgrGetHashMap" classname="org.isf.supplier.test.Tests" time="0.702"/>
+  <testcase name="testMgrSupplierGetByID" classname="org.isf.supplier.test.Tests" time="0.689"/>
+  <testcase name="testMgrSupplierGetList" classname="org.isf.supplier.test.Tests" time="0.664"/>
 </testsuite>
