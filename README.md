@@ -1,6 +1,13 @@
-# Esse projeto é apenas um fork do Open Hospital para execução de testes da disciplina MO409 da UNICAMP. 
+# Projeto final da disciplina MO409 - UNICAMP - 1s/2024 
 
-# Open Hospital - Core
+**Importante**: Esse repositório é um clone do https://github.com/informatici/openhospital-core, na versão 1.11.5
+ - Fizemos o clone do repositório para implementarmos diversos métodos de teste que aprendemos ao longo da disciplina.
+
+## Códigos criados para os testes:
+ - **[Testes Funcionais](https://github.com/leolivrare/projeto-final-MO409/blob/main/src/test/java/org/isf/vaccine/test/VaccineIoOperationsFunctionalTest.java)**
+
+
+# [README original do projeto Open Hospital] Open Hospital - Core
 [![Java CI](https://github.com/informatici/openhospital-core/workflows/Java%20CI%20with%20Maven/badge.svg)](https://github.com/informatici/openhospital-core/actions?query=workflow%3A%22Java+CI+with+Maven%22)
 
 This is the Core component of [Open Hospital][openhospital]: it contains the business logic and the data abstraction layer.  
