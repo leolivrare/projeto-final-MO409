@@ -6,6 +6,14 @@
 ## Códigos criados para os testes:
  - **[Testes Funcionais](https://github.com/leolivrare/projeto-final-MO409/blob/main/src/test/java/org/isf/vaccine/test/VaccineIoOperationsFunctionalTest.java)**
 
+## Como executar os testes criados:
+
+**Setup do Banco de Dados**: Execute o seguinte comando para criar o MySQL localmente:
+```
+docker-compose up
+```
+
+- Com o banco funcionando, basta executar os testes jUnit direto no arquivo **[Testes Funcionais](https://github.com/leolivrare/projeto-final-MO409/blob/main/src/test/java/org/isf/vaccine/test/VaccineIoOperationsFunctionalTest.java)**
 
 # [README original do projeto Open Hospital] Open Hospital - Core
 [![Java CI](https://github.com/informatici/openhospital-core/workflows/Java%20CI%20with%20Maven/badge.svg)](https://github.com/informatici/openhospital-core/actions?query=workflow%3A%22Java+CI+with+Maven%22)
